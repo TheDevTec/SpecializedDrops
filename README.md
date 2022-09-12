@@ -1,0 +1,2 @@
+# SpecializedDrops
+Minecraft plugin
