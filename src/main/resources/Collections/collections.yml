@@ -1,0 +1,10 @@
+# Put here list of created collections...
+Collections:
+  # Name of your collection
+  MagicCollection:
+    # Folder name of collection
+    FolderName: "MagicCollection"
+    # Includes means, that you can include other collections
+    # into new one. So you don't have to copy & paste items
+    # between collections...
+    Includes: []

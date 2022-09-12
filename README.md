@@ -1,2 +1,2 @@
-# SpecializedDrops
+# pluginprovider.SpecializedDrops
 Minecraft plugin
