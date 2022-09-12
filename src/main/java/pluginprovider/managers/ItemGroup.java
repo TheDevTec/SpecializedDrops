@@ -1,7 +1,7 @@
 package pluginprovider.managers;
 
 import me.devtec.shared.dataholder.Config;
-import me.devtec.shared.scheduler.Tasker;
+import me.devtec.shared.utility.PercentageList;
 import me.devtec.shared.utility.StringUtils;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
@@ -9,8 +9,9 @@ import pluginprovider.objects.CachedItem;
 
 import java.io.File;
 import java.util.*;
+import java.util.stream.Collectors;
 
-public class Collections {
+public class ItemGroup {
 
     private static final String collectionsPath = "./plugins/SpecializedDrops/Collections";
     public static void reloadCollections() {
@@ -33,7 +34,7 @@ public class Collections {
                 double percentage = one_i/of_i;
                 collectionDrops.put(percentage, new CachedItem(item.getPath()));
             }
-            collectionsCache.put(name, new Collections(collectionDrops, collections.getStringList("Collections." + name + ".Includes")));
+            collectionsCache.put(name, new ItemGroup(collectionDrops, collections.getStringList("Collections." + name + ".Includes")));
         }
     }
 
@@ -41,18 +42,18 @@ public class Collections {
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
 
-    private static final Map<String, Collections> collectionsCache = new HashMap<>();
-    public static Collections getCollectionByName(String name) {
+    private static final Map<String, ItemGroup> collectionsCache = new HashMap<>();
+    public static ItemGroup getCollectionByName(String name) {
         return collectionsCache.get(name);
     }
-    public static Collections getRandomCollection() {
-        return StringUtils.getRandomFromList(new ArrayList<>(collectionsCache.values()));
+    public static ItemGroup getRandomCollection() {
+        return StringUtils.getRandomFromList(getCollections().parallelStream().collect(Collectors.toList()));
     }
-    public static List<Collections> getCollections() {
-        return new ArrayList<>(collectionsCache.values());
+    public static Collection<ItemGroup> getCollections() {
+        return collectionsCache.values();
     }
-    public static List<String> getCollectionNames() {
-        return new ArrayList<>(collectionsCache.keySet());
+    public static Set<String> getCollectionNames() {
+        return collectionsCache.keySet();
     }
 
     ////////////////////////////////////////////////////////////////
@@ -62,29 +63,21 @@ public class Collections {
     private final Map<Double, CachedItem> collectionDrops;
     private final List<String> collectionIncludes;
 
-    public Collections(Map<Double, CachedItem> collectionDrops, List<String> collectionIncludes) {
+    public ItemGroup(Map<Double, CachedItem> collectionDrops, List<String> collectionIncludes) {
         this.collectionDrops = collectionDrops;
         this.collectionIncludes = collectionIncludes;
     }
 
     public ItemStack asyncPickRandomItem() {
-        ItemStack[] stack = new ItemStack[]{null};
-        new Tasker(){
-            @Override
-            public void run() {
-                Map<Double, CachedItem> using = new HashMap<>(collectionDrops);
-                for (String var : collectionIncludes) {
-                    using.putAll(getCollectionByName(var).getCollection());
-                }
-                List<CachedItem> drops = new ArrayList<>();
-                for (Double var : using.keySet()) {
-                    double varTo = StringUtils.generateRandomDouble(0, 100);
-                    if (var<=varTo) drops.add(using.get(var));
-                }
-                stack[0] = StringUtils.getRandomFromList(drops).asyncBuildStack();
-            }
-        }.runTask();
-        return stack[0];
+        Map<Double, CachedItem> using = new HashMap<>(collectionDrops);
+        for (String var : collectionIncludes) {
+            using.putAll(getCollectionByName(var).getCollection());
+        }
+        PercentageList<CachedItem> item = new PercentageList<>();
+        for (double value : using.keySet()) {
+            item.add(collectionDrops.get(value), value);
+        }
+        return item.getRandom().asyncBuildStack();
     }
     public Map<Double, CachedItem> getCollection() {
         return collectionDrops;

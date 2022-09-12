@@ -24,28 +24,22 @@ public class CachedItem {
     }
 
     public ItemStack asyncBuildStack() {
-        final ItemStack[] itemStack = {null};
-        new Tasker() {
-            @Override
-            public void run() {
-                Config quickConfig = Config.loadFromFile(pathToItem);
-                Material material = Material.valueOf(quickConfig.getString("Material"));
-                String name = quickConfig.getString("Name");
-                int amount = quickConfig.getInt("Amount");
-                List<String> lore = quickConfig.getStringList("Lore");
-                int customModelData = quickConfig.getInt("CustomModelData");
-                List<String> enchantments = quickConfig.getStringList("Enchantments");
-                name = StringUtils.colorize(name);
-                StringUtils.colorize(lore);
-                itemStack[0] = ItemMaker.of(material).customModel(customModelData).displayName(name).lore(lore).amount(amount).build();
-                for (String enchantmentData : enchantments) {
-                    String enchantment = enchantmentData.split(":")[0];
-                    int intensity = Integer.parseInt(enchantment.split(":")[1]);
-                    itemStack[0].addEnchantment(Enchantment.getByName(enchantment.toUpperCase()), intensity);
-                }
-            }
-        }.runTask();
-        return itemStack[0];
+        Config quickConfig = Config.loadFromFile(pathToItem);
+        Material material = Material.valueOf(quickConfig.getString("Material"));
+        String name = quickConfig.getString("Name");
+        int amount = quickConfig.getInt("Amount");
+        List<String> lore = quickConfig.getStringList("Lore");
+        int customModelData = quickConfig.getInt("CustomModelData");
+        List<String> enchantments = quickConfig.getStringList("Enchantments");
+        name = StringUtils.colorize(name);
+        StringUtils.colorize(lore);
+        ItemStack builder = ItemMaker.of(material).customModel(customModelData).displayName(name).lore(lore).amount(amount).build();
+        for (String enchantmentData : enchantments) {
+            String enchantment = enchantmentData.split(":")[0];
+            int intensity = Integer.parseInt(enchantment.split(":")[1]);
+            builder.addEnchantment(Enchantment.getByName(enchantment.toUpperCase()), intensity);
+        }
+        return builder;
     }
     public void asyncDropEvents(final BlockBreakEvent e) {
         new Tasker() {
