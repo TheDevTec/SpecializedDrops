@@ -9,6 +9,9 @@ Name: "&5&lMagic Axe"
 # Don't use colors in legacy text!
 LegacyName: "Magic Axe"
 # Use '1' in non-stackable items like Sword or Bucket
+# If you want use Random... -> Example:
+# Amount: ~Random(min, max)
+# So -> Amount: ~Random(1,5)
 Amount: 1
 # CustomModelData value is for custom texture-pack usage...
 # You're not using texture pack? Throw here 0

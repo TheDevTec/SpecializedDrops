@@ -12,8 +12,10 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
+import pluginprovider.utils.Processor;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class CachedItem {
 
@@ -27,7 +29,12 @@ public class CachedItem {
         Config quickConfig = Config.loadFromFile(pathToItem);
         Material material = Material.valueOf(quickConfig.getString("Material"));
         String name = quickConfig.getString("Name");
-        int amount = quickConfig.getInt("Amount");
+        //
+        String amount_worker = quickConfig.getString("Amount");
+        int amount;
+        if (Pattern.compile("~Random\\((.?),(.?)\\)").matcher(amount_worker).find()) amount = Processor.parseItemAmount(amount_worker);
+        else amount = Integer.parseInt(amount_worker);
+        //
         List<String> lore = quickConfig.getStringList("Lore");
         int customModelData = quickConfig.getInt("CustomModelData");
         List<String> enchantments = quickConfig.getStringList("Enchantments");
