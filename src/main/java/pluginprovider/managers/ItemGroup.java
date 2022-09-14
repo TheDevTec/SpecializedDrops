@@ -24,7 +24,7 @@ public class ItemGroup {
             collectionWorker.put(name, collectionFolder.listFiles());
         }
         for (String name : collectionWorker.keySet()) {
-            final Map<Double, CachedItem> collectionDrops = new HashMap<>();
+            final List<CachedItem> collectionDrops = new ArrayList<>();
             for (File item : collectionWorker.get(name)) {
                 Config doubleGetter = Config.loadFromFile(item.getPath());
                 String one = doubleGetter.getString("DropPercentage").split("/")[0];
@@ -32,7 +32,7 @@ public class ItemGroup {
                 double one_i = Integer.parseInt(one);
                 double of_i = Integer.parseInt(of);
                 double percentage = one_i/of_i;
-                collectionDrops.put(percentage, new CachedItem(item.getPath()));
+                collectionDrops.add(new CachedItem(item.getPath(), percentage));
             }
             collectionsCache.put(name, new ItemGroup(collectionDrops, collections.getStringList("Collections." + name + ".Includes")));
         }
@@ -60,26 +60,36 @@ public class ItemGroup {
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
 
-    private final Map<Double, CachedItem> collectionDrops;
+    private final List<CachedItem> collectionDrops;
     private final List<String> collectionIncludes;
 
-    public ItemGroup(Map<Double, CachedItem> collectionDrops, List<String> collectionIncludes) {
+    public ItemGroup(List<CachedItem> collectionDrops, List<String> collectionIncludes) {
         this.collectionDrops = collectionDrops;
         this.collectionIncludes = collectionIncludes;
     }
 
     public ItemStack asyncPickRandomItem() {
-        Map<Double, CachedItem> using = new HashMap<>(collectionDrops);
-        for (String var : collectionIncludes) {
-            using.putAll(getCollectionByName(var).getCollection());
-        }
         PercentageList<CachedItem> item = new PercentageList<>();
-        for (double value : using.keySet()) {
-            item.add(collectionDrops.get(value), value);
+        for (String using : collectionIncludes) {
+            for (CachedItem var : ItemGroup.getCollectionByName(using).getCollection()) {
+                if (var==null) {
+                    System.out.println("Null!");
+                    continue;
+                }
+                item.add(var, var.getChance());
+            }
         }
-        return item.getRandom().asyncBuildStack();
+        for (CachedItem loop : collectionDrops) {
+            if (loop==null) {
+                System.out.println("Null!");
+                continue;
+            }
+            item.add(loop, loop.getChance());
+        }
+        CachedItem randomSelection = item.get();
+        return randomSelection.asyncBuildStack();
     }
-    public Map<Double, CachedItem> getCollection() {
+    public List<CachedItem> getCollection() {
         return collectionDrops;
     }
 

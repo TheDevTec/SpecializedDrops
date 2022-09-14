@@ -34,7 +34,7 @@ Enchantments:
 #      | 1/10000 - 0.01%
 #      | 1/100000 - 0.001%
 #      | 1/1000000 - 0.0001%
-DropPercentage: "1/100"
+DropPercentage: "25/100"
 # In every line, message you can use Colors... With 1.16 or higher Gradient & Rgb
 # In custom commands you can't use our API, search information about plugin command
 # Placeholders: {x} {y} {z} -> Location of drop

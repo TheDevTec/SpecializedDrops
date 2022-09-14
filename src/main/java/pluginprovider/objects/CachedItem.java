@@ -20,9 +20,11 @@ import java.util.regex.Pattern;
 public class CachedItem {
 
     private final String pathToItem;
+    private final double chance;
 
-    public CachedItem(String pathToItem) {
+    public CachedItem(String pathToItem, double chance) {
         this.pathToItem = pathToItem;
+        this.chance = chance;
     }
 
     public ItemStack asyncBuildStack() {
@@ -42,11 +44,15 @@ public class CachedItem {
         StringUtils.colorize(lore);
         ItemStack builder = ItemMaker.of(material).customModel(customModelData).displayName(name).lore(lore).amount(amount).build();
         for (String enchantmentData : enchantments) {
-            String enchantment = enchantmentData.split(":")[0];
-            int intensity = Integer.parseInt(enchantment.split(":")[1]);
-            builder.addEnchantment(Enchantment.getByName(enchantment.toUpperCase()), intensity);
+            System.out.println(enchantmentData);
+            String enchantment = enchantmentData.split(":")[0].toUpperCase();
+            int intensity = Integer.parseInt(enchantmentData.split(":")[1]);
+            builder.addEnchantment(Enchantment.getByName(enchantment), intensity);
         }
         return builder;
+    }
+    public double getChance() {
+        return chance;
     }
     public void asyncDropEvents(final BlockBreakEvent e) {
         new Tasker() {
