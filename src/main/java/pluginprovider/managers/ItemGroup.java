@@ -86,7 +86,7 @@ public class ItemGroup {
             }
             item.add(loop, loop.getChance());
         }
-        CachedItem randomSelection = item.get();
+        CachedItem randomSelection = item.getRandom();
         return randomSelection.asyncBuildStack();
     }
     public List<CachedItem> getCollection() {

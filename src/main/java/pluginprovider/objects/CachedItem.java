@@ -44,7 +44,6 @@ public class CachedItem {
         StringUtils.colorize(lore);
         ItemStack builder = ItemMaker.of(material).customModel(customModelData).displayName(name).lore(lore).amount(amount).build();
         for (String enchantmentData : enchantments) {
-            System.out.println(enchantmentData);
             String enchantment = enchantmentData.split(":")[0].toUpperCase();
             int intensity = Integer.parseInt(enchantmentData.split(":")[1]);
             builder.addEnchantment(Enchantment.getByName(enchantment), intensity);

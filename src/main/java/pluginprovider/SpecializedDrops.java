@@ -55,6 +55,7 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     public void onEnable() {
         Resources.queryFile(getInstance(), "settings.yml");
         Resources.queryFolder(getInstance(), "Collections/");
+        Resources.queryFolder(getInstance(), "Overrides/");
         loadConfigurations();
         ItemGroup.reloadCollections();
         Bukkit.getPluginManager().registerEvents(this, this);
