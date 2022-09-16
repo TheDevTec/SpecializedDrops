@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Updated Code's folder">
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Updated README.md">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Items/example.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/Factors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/Factors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/settings.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663338431568</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- Updated README.md">
+      <created>1663359574351</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663359574351</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,8 +158,8 @@
     <MESSAGE value="- Added Factors.java" />
     <MESSAGE value="- Fixed-up code (Works in game)&#10;- asyncPickRandomItem in ItemGroup.java has to be recalculated..." />
     <MESSAGE value="- Fixed-up code&#10;- Added Profile.java (Override.java has to be coded)&#10;- Fixed asyncRandomItemStack();&#10;- Added Overrides folder" />
-    <MESSAGE value="- Updated README.md" />
     <MESSAGE value="- Updated Code's folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Updated Code's folder" />
+    <MESSAGE value="- Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Updated README.md" />
   </component>
 </project>

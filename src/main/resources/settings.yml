@@ -1,0 +1,120 @@
+# Simple Override is simple alternative of advanced Override system...
+# (Advanced Override system You can configure in /Overrides folder)
+Simple_Override:
+  '0':
+    # Switch (true/false)
+    Enabled: false
+    # Put here Entity/Block name
+    Editing:
+      - "STONE"
+    # Put here drop from /Items/...
+    # If you want use custom Item... Use: ~{Item:<fileName>}
+    # Put FileName with .yml!
+    Drop: STONE
+    # You can edit chance here
+    Chance: 50.0
+  '1':
+    # Switch (true/false)
+    Enabled: false
+    # Put here Entity/Block name
+    Editing:
+      - "SAND"
+    # Put here drop from /Items/...
+    # If you want use custom Item... Use: ~{Item:<FolderName>/<FileName>}
+    # Put FileName with .yml!
+    Drop: RED_SAND
+    # You can edit chance here
+    Chance: 50.0
+# Here you can prepare the Selection System
+System:
+  # If You don't have to, don't edit this option...
+  # Here You can edit selection priority
+  # Types: | Override: Override system... If is disabled this part will be skipped
+  #        | MainSystem: Main selection system... If is disabled part will be skipped tho
+  #        | DefaultDrop: Default drop from Block/Entity
+  # If Block destroy or Entity kill don't contain conditions in any profile, Overrides part will be skipped
+  # and the selection is on MainSystem
+  Priorities:
+    - Override
+    - MainSystem
+    - DefaultDrop
+  # Here you can configure the Main Selection System
+  MainSystem:
+    # Setup drops for blocks
+    Blocks:
+      # Do you want see what Type contains?
+      # Check out our Sites for more details...
+      # Do not edit type names! Just values...
+      # Put directories names from /Items folder!
+      Glass_Types:
+        Enabled: true
+        Folder: "Glasses"
+        Includes: []
+      Advantage_Types:
+        Enabled: true
+        Folder: "Advantages"
+        Includes: []
+      Based_Block_Types:
+        Enabled: true
+        Folder: "BasedBlocks"
+        Includes: []
+      Design_Types:
+        Enabled: true
+        Folder: "Designs"
+        Includes: []
+      Using_Types:
+        Enabled: true
+        Folder: "Usings"
+        Includes: []
+      Electricity_Types:
+        Enabled: true
+        Folder: "Electricities"
+        Includes: []
+      Plants_Types:
+        Enabled: true
+        Folder: "Plants"
+        Includes: []
+      Snow_Types:
+        Enabled: true
+        Folder: "Snows"
+        Includes: []
+      Dirt_Types:
+        Enabled: true
+        Folder: "Dirts"
+        Includes: []
+      Sand_Types:
+        Enabled: true
+        Folder: "Sands"
+        Includes: []
+      Stone_Types:
+        Enabled: true
+        Folder: "Stones"
+        Includes: []
+      Deep_Stone_Types:
+        Enabled: true
+        Folder: "DeepStones"
+        Includes: []
+      Ore_Types:
+        Enabled: true
+        Folder: "Ores"
+        Includes: []
+      Wood_Types:
+        Enabled: true
+        Folder: "Woods"
+        Includes: []
+      Food_Types:
+        Enabled: true
+        Folder: "Foods"
+        Includes: []
+    # Setup drops for entities
+    Entities:
+      # Mob types contains every enemy entity
+      Mob_Types:
+        Enabled: true
+        Folder: "Mobs"
+        Includes: []
+      # Friendly types contains every friendly entity
+      Friendly_Types:
+        Enabled: true
+        Folder: "Friends"
+        Includes: []
