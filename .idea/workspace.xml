@@ -4,35 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Updated README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/SpecializedDrops.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_0_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_16_R0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_19_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Logo/1000x1000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Logo/2000x2000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Logo/256x256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Logo/512x499.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Logo/512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Logo/logo.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/TheAPI.jar" afterDir="false" />
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Updated Code's folder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663337051663</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Updated Code's folder">
+      <created>1663338431568</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663338431568</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +150,7 @@
     <MESSAGE value="- Fixed-up code (Works in game)&#10;- asyncPickRandomItem in ItemGroup.java has to be recalculated..." />
     <MESSAGE value="- Fixed-up code&#10;- Added Profile.java (Override.java has to be coded)&#10;- Fixed asyncRandomItemStack();&#10;- Added Overrides folder" />
     <MESSAGE value="- Updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Updated README.md" />
+    <MESSAGE value="- Updated Code's folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Updated Code's folder" />
   </component>
 </project>
