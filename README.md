@@ -13,7 +13,7 @@ If You're interested in out source, here is description how to start plugin on y
 - Start server
 
 Is there any conditions to use this source?
-No, but id You want to use it correctly, make sure about
+No, but if You want to use it correctly, make sure about
 - Your server version (Plugin supports 1.8 - Latest)
 - TheAPI in /plugins folder (TheAPI is depend for this source)
 
