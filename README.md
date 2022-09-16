@@ -1,4 +1,4 @@
-# Welcome to SpecializedDrops
+![](https://paste.sk/images/vCoozf.png)
 ## Quick description
 Specialized Drops is advanced plugin to configure your own custom drops in minecraft...
 Resource has lot of functions that You can use in your configuration.
