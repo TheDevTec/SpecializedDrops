@@ -16,4 +16,3 @@ Is there any conditions to use this source?
 No, but if You want to use it correctly, make sure about
 - Your server version (Plugin supports 1.8 - Latest)
 - TheAPI in /plugins folder (TheAPI is depend for this source)
-
