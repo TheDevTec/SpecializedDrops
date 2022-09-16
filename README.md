@@ -1,4 +1,6 @@
-![](https://paste.sk/images/vCoozf.png)
+<p align="center">
+  <img src="https://paste.sk/images/vCoozf.png" />
+</p>
 ## Quick description
 Specialized Drops is advanced plugin to configure your own custom drops in minecraft...
 Resource has lot of functions that You can use in your configuration.
