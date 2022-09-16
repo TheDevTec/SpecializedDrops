@@ -46,6 +46,14 @@ System:
       # Check out our Sites for more details...
       # Do not edit type names! Just values...
       # Put directories names from /Items folder!
+      # You can also include any other folder...
+      # Example:
+      #
+      # Includes:
+      #   - Glasses
+      #   - BasedBlocks
+      #
+      # If You don't want to include anything -> Includes: []
       Glass_Types:
         Enabled: true
         Folder: "Glasses"
