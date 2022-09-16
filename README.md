@@ -1,5 +1,5 @@
-# Welcome to SpecializedDrops resource created by DevTec
-### Quick description
+# Welcome to SpecializedDrops
+## Quick description
 Specialized Drops is advanced plugin to configure your own custom drops in minecraft...
 Resource has lot of functions that You can use in your configuration.
 You can created your own items, that can drop from block or entity.
