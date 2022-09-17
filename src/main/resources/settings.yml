@@ -4,7 +4,7 @@ Simple_Override:
   '0':
     # Switch (true/false)
     Enabled: false
-    # Put here Entity/Block name
+    # Put here Entity/Block names
     Editing:
       - "STONE"
     # Put here drop from /Items/...
@@ -16,7 +16,7 @@ Simple_Override:
   '1':
     # Switch (true/false)
     Enabled: false
-    # Put here Entity/Block name
+    # Put here Entity/Block names
     Editing:
       - "SAND"
     # Put here drop from /Items/...

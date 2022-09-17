@@ -5,6 +5,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import pluginprovider.listeners.BlockBreakEvent;
+import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.ItemGroup;
 import pluginprovider.managers.Resources;
 
@@ -27,6 +29,8 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         loadConfigurations();
         ItemGroup.reloadCollections();
         Bukkit.getPluginManager().registerEvents(this, this);
+        Bukkit.getPluginManager().registerEvents(new BlockBreakEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new EntityDeathEvent(), this);
     }
 
     @Override
