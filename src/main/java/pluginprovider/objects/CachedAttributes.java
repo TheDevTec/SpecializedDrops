@@ -52,8 +52,8 @@ public class CachedAttributes {
     public Config getConfig() {
         return Config.loadFromFile(getPath());
     }
-    public Material getMaterial() {
-        return Material.valueOf(material);
+    public String getMaterial() {
+        return material;
     }
     public String getName() {
         return name;

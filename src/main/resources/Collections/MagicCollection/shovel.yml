@@ -1,5 +1,6 @@
-# Please use Material name for your Server version
-# You can find them on our pages
+# You can use 1.13+ ID's or if you want you can also you 1.13- ID's
+# 1.13+ -> Like BLACK_WOOL
+# 1.13- -> Like 2:2
 Material: DIAMOND_SHOVEL
 # You can use classic colors...
 # With 1.16 or higher you can use gradient & rgb

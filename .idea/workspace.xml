@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Quick fixes">
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Code Clean-Up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/ItemGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/ItemGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/Resources.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/axe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/axe.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/pickaxe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/pickaxe.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/shovel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/shovel.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/sword.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/sword.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/collections.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/collections.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Items/example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Items/example.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663416870873</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="- Code Clean-Up">
+      <created>1663424461996</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663424461996</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +203,7 @@
     <MESSAGE value="- Some fixes" />
     <MESSAGE value="- Added supportive methods... (In Processor.java)&#10;- Advanced drop system (Counts with Additional &amp; List&lt;Drops&gt;)" />
     <MESSAGE value="- Quick fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Quick fixes" />
+    <MESSAGE value="- Code Clean-Up" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code Clean-Up" />
   </component>
 </project>

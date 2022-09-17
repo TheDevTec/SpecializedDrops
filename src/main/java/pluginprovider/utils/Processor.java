@@ -4,6 +4,7 @@ import me.devtec.shared.dataholder.Config;
 import me.devtec.shared.dataholder.DataType;
 import me.devtec.shared.utility.StringUtils;
 import me.devtec.theapi.bukkit.game.ItemMaker;
+import me.devtec.theapi.bukkit.xseries.XMaterial;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
@@ -74,7 +75,7 @@ public class Processor {
 
     // Item reader
     public static ItemStack readItem(CachedAttributes rawItem) {
-        ItemStack value = ItemMaker.of(rawItem.getMaterial())
+        ItemStack value = ItemMaker.of(parseMaterial(rawItem.getMaterial()).parseMaterial())
                 .displayName(rawItem.getName())
                 .amount(parseItemAmount(rawItem.getAmount()))
                 .customModel(rawItem.getCustomModelData())
@@ -84,6 +85,12 @@ public class Processor {
             if (var != null) value.addEnchantment(var, enchantsReader.get(var));
         }
         return value;
+    }
+
+    // Material
+    public static XMaterial parseMaterial(String material) {
+        if (XMaterial.matchXMaterial(material).isPresent()) return XMaterial.matchXMaterial(material).get();
+        return null;
     }
 
     // DropEvents executor
