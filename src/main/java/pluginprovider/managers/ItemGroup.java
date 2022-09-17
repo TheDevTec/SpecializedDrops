@@ -68,7 +68,8 @@ public class ItemGroup {
         this.collectionIncludes = collectionIncludes;
     }
 
-    public ItemStack asyncPickRandomItem() {
+    public List<ItemStack> asyncPickRandomItem(List<ItemStack> defaultDrops) {
+        List<ItemStack> drops = new ArrayList<>();
         PercentageList<CachedItem> item = new PercentageList<>();
         for (String using : collectionIncludes) {
             for (CachedItem var : ItemGroup.getCollectionByName(using).getCollection()) {
@@ -87,7 +88,9 @@ public class ItemGroup {
             item.add(loop, loop.getChance());
         }
         CachedItem randomSelection = item.getRandom();
-        return randomSelection.asyncBuildStack();
+        if (randomSelection.quickAttributes().isAdditional()) drops.addAll(defaultDrops);
+        drops.add(randomSelection.asyncBuildStack());
+        return drops;
     }
     public List<CachedItem> getCollection() {
         return collectionDrops;

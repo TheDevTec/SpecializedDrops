@@ -4,18 +4,12 @@ import me.devtec.shared.dataholder.Config;
 import me.devtec.shared.scheduler.Tasker;
 import me.devtec.shared.utility.StringUtils;
 import me.devtec.theapi.bukkit.BukkitLoader;
-import me.devtec.theapi.bukkit.game.ItemMaker;
 import me.devtec.theapi.bukkit.nms.NmsProvider;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
 import pluginprovider.utils.Processor;
-
-import java.util.List;
-import java.util.regex.Pattern;
 
 public class CachedItem {
 
@@ -27,31 +21,12 @@ public class CachedItem {
         this.chance = chance;
     }
 
+    // Complex actions
     public ItemStack asyncBuildStack() {
-        Config quickConfig = Config.loadFromFile(pathToItem);
-        Material material = Material.valueOf(quickConfig.getString("Material"));
-        String name = quickConfig.getString("Name");
-        //
-        String amount_worker = quickConfig.getString("Amount");
-        int amount;
-        if (Pattern.compile("~Random\\((.?),(.?)\\)").matcher(amount_worker).find()) amount = Processor.parseItemAmount(amount_worker);
-        else amount = Integer.parseInt(amount_worker);
-        //
-        List<String> lore = quickConfig.getStringList("Lore");
-        int customModelData = quickConfig.getInt("CustomModelData");
-        List<String> enchantments = quickConfig.getStringList("Enchantments");
-        name = StringUtils.colorize(name);
-        StringUtils.colorize(lore);
-        ItemStack builder = ItemMaker.of(material).customModel(customModelData).displayName(name).lore(lore).amount(amount).build();
-        for (String enchantmentData : enchantments) {
-            String enchantment = enchantmentData.split(":")[0].toUpperCase();
-            int intensity = Integer.parseInt(enchantmentData.split(":")[1]);
-            builder.addEnchantment(Enchantment.getByName(enchantment), intensity);
-        }
-        return builder;
+        return Processor.readItem(new CachedAttributes(pathToItem));
     }
-    public double getChance() {
-        return chance;
+    public CachedAttributes quickAttributes() {
+        return new CachedAttributes(pathToItem);
     }
     public void asyncDropEvents(final BlockBreakEvent e) {
         new Tasker() {
@@ -114,6 +89,11 @@ public class CachedItem {
                 }
             }
         }.runTask();
+    }
+
+    // Simple getters
+    public double getChance() {
+        return chance;
     }
 
 }
