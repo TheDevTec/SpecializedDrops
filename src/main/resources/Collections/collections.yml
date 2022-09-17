@@ -4,6 +4,10 @@ Collections:
   MagicCollection:
     # Folder name of collection
     FolderName: "MagicCollection"
+    # You can also use MaxDrops value to define max selected items that will drop from collection
+    MaxDrops: 1
+    # You can define if selected items will be dropped with or without default drops...
+    DropWithDefaults: false
     # Includes means, that you can include other collections
     # into new one. So you don't have to copy & paste items
     # between collections...

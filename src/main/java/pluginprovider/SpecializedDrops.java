@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import pluginprovider.listeners.BlockBreakEvent;
 import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.ItemGroup;
-import pluginprovider.managers.Resources;
+import pluginprovider.utils.Processor;
 
 public class SpecializedDrops extends JavaPlugin implements Listener {
 
@@ -23,9 +23,9 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        Resources.queryFile(getInstance(), "settings.yml");
-        Resources.queryFolder(getInstance(), "Collections/");
-        Resources.queryFolder(getInstance(), "Overrides/");
+        Processor.queryFile(getInstance(), "settings.yml");
+        Processor.queryFolder(getInstance(), "Collections/");
+        Processor.queryFolder(getInstance(), "Overrides/");
         loadConfigurations();
         ItemGroup.reloadCollections();
         Bukkit.getPluginManager().registerEvents(this, this);
@@ -41,7 +41,8 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     ////////////////////////////////////////////////////////////////
 
     private void loadConfigurations() {
-        collections = Config.loadFromPlugin(getInstance().getClass(), "Collections/collections.yml", "/plugins/SpecializedDrops/Collections/collections.yml");
+        collections = Config.loadFromPlugin(getInstance().getClass(), "Collections/collections.yml", "./plugins/SpecializedDrops/Collections/collections.yml");
+        overrides = Config.loadFromPlugin(getInstance().getClass(), "Overrides/overrides.yml", "./plugins/SpecializedDrops/Overrides/overrides.yml");
     }
 
     ////////////////////////////////////////////////////////////////
@@ -53,6 +54,7 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
 
     // Configs
     private static Config collections;
+    private static Config overrides;
 
     // Getters plugin values
     public static Plugin getInstance() {
@@ -63,5 +65,12 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     public static Config getCollections() {
         return collections;
     }
+    public static Config getOverrides() {
+        return overrides;
+    }
+
+    ////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
 
 }

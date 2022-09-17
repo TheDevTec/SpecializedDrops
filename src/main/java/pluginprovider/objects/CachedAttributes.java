@@ -4,6 +4,7 @@ import me.devtec.shared.dataholder.Config;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,29 +21,37 @@ public class CachedAttributes {
     private final Map<String, Integer> enchantments;
 
     // Others
+    private final String path;
     private final String dropPercentage;
     private final boolean isAdditional;
 
     // Constructor
     public CachedAttributes(String path) {
         Config var = Config.loadFromFile(path);
-        material = var.getString("Material");
-        name = var.getString("Name");
-        legacy_name = var.getString("LegacyName");
-        amount = var.getString("Amount");
-        customModelData = var.getInt("CustomModelData");
-        lore = var.getStringList("Lore");
-        //
-        enchantments = new HashMap<>();
-        for (String data : var.getStringList("Enchantments")) {
-            enchantments.put(data.split(":")[0], Integer.parseInt(data.split(":")[1]));
-        }
-        //
-        dropPercentage = var.getString("DropPercentage");
-        isAdditional = var.getBoolean("IsAdditional");
+        this.path = path;
+        if (var.getKeys().contains("Material")) material = var.getString("Material"); else material = "STONE";
+        if (var.getKeys().contains("Name")) name = var.getString("Name"); else name = "Undefined name";
+        if (var.getKeys().contains("LegacyName")) legacy_name = var.getString("LegacyName"); else legacy_name = "Undefined legacy name";
+        if (var.getKeys().contains("Amount")) amount = var.getString("Amount"); else amount = "1";
+        if (var.getKeys().contains("CustomModelData")) customModelData = var.getInt("CustomModelData"); else customModelData = 1;
+        if (var.getKeys().contains("Lore")) lore = var.getStringList("Lore"); else lore = new ArrayList<>();
+        if (var.getKeys().contains("Enchantments")) {
+            enchantments = new HashMap<>();
+            for (String data : var.getStringList("Enchantments")) {
+                enchantments.put(data.split(":")[0], Integer.parseInt(data.split(":")[1]));
+            }
+        } else enchantments = new HashMap<>();
+        if (var.getKeys().contains("DropPercentage")) dropPercentage = var.getString("DropPercentage"); else dropPercentage = "1/1";
+        if (var.getKeys().contains("IsAdditional")) isAdditional = var.getBoolean("IsAdditional"); else isAdditional = false;
     }
 
     // Getter
+    public String getPath() {
+        return path;
+    }
+    public Config getConfig() {
+        return Config.loadFromFile(getPath());
+    }
     public Material getMaterial() {
         return Material.valueOf(material);
     }

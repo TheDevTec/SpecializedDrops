@@ -1,40 +1,25 @@
 package pluginprovider.objects;
 
 import me.devtec.shared.dataholder.Config;
-import me.devtec.shared.utility.StringUtils;
 import org.bukkit.event.block.BlockBreakEvent;
 import pluginprovider.enums.factors.FactorsDataType;
 import pluginprovider.enums.factors.valuetypes.FactorsLookingValueType;
 import pluginprovider.enums.factors.valuetypes.FactorsTimeValueType;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Profile {
 
-    private static final Map<String, Profile> cache = new HashMap<>();
-    public static Profile getProfileByName(String name) {
-        return cache.get(name);
-    }
-    public static Profile getRandomProfile() {
-        return StringUtils.getRandomFromList(cache.values().parallelStream().collect(Collectors.toList()));
-    }
-    public static Collection<Profile> getProfiles() {
-        return cache.values();
-    }
-    public static Collection<String> getProfilesNames() {
-        return cache.keySet();
-    }
-
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
 
+    // Values
     private final Map<FactorsDataType, Object> values;
 
+    // Constructor
     public Profile(String fileName) {
         Config quickConfig = Config.loadFromFile("/plugins/SpecializedDrops/Overrides/Profiles/" + fileName);
         values = new HashMap<>();
@@ -85,6 +70,7 @@ public class Profile {
         values.put(looking, looking_value);
     }
 
+    // Functions
     public boolean asyncCheckWith(final BlockBreakEvent e) {
         boolean returner = true;
         Factors destroyFactors = new Factors(e, ((List<String>) values.get(FactorsDataType.PERMISSION)).parallelStream().toArray(String[]::new));
@@ -143,5 +129,9 @@ public class Profile {
         }
         return returner;
     }
+
+    ////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
 
 }
