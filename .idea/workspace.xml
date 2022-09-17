@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Improved readItem() in Processor.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/OverrideSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" afterDir="false" />
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Registering Materials to Types... Completed: (A-C)&#10;- Created OverrideSystem.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/TheAPI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/TheAPI.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/ItemGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/settings.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663425790224</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- Registering Materials to Types... Completed: (A-C)&#10;- Created OverrideSystem.java">
+      <created>1663443299470</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663443299470</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +217,8 @@
     <MESSAGE value="- Quick fixes" />
     <MESSAGE value="- Code Clean-Up" />
     <MESSAGE value="- Improved readItem() in Processor.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Improved readItem() in Processor.java" />
+    <MESSAGE value="- Registering Materials to Types... Completed: (A-C)" />
+    <MESSAGE value="- Registering Materials to Types... Completed: (A-C)&#10;- Created OverrideSystem.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Registering Materials to Types... Completed: (A-C)&#10;- Created OverrideSystem.java" />
   </component>
 </project>

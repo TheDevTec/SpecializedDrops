@@ -54,7 +54,7 @@ public class CollectionsSystem {
         return collectionsCache.get(name);
     }
     public static CollectionsSystem getRandomCollection() {
-        return StringUtils.getRandomFromList(getCollections().parallelStream().collect(Collectors.toList()));
+        return StringUtils.randomFromCollection(getCollections().parallelStream().collect(Collectors.toList()));
     }
     public static Collection<CollectionsSystem> getCollections() {
         return collectionsCache.values();

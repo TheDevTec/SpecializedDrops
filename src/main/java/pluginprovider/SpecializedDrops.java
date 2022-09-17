@@ -9,6 +9,7 @@ import pluginprovider.listeners.BlockBreakEvent;
 import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.CollectionsSystem;
 import pluginprovider.selectionsystems.OverrideSystem;
+import pluginprovider.utils.AdvancedTypes;
 import pluginprovider.utils.Processor;
 
 public class SpecializedDrops extends JavaPlugin implements Listener {
@@ -29,6 +30,7 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         // Load all modules
         CollectionsSystem.reloadCollections();
         OverrideSystem.reloadOverrides();
+        AdvancedTypes.loadTypes();
         // Register utilities
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(new BlockBreakEvent(), this);
@@ -45,6 +47,7 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     private void loadConfigurations() {
         Processor.queryFolder(getInstance(), "Collections/");
         Processor.queryFolder(getInstance(), "Overrides/");
+        Processor.queryFolder(getInstance(), "Items/");
         settings = Config.loadFromPlugin(getInstance().getClass(), "settings.yml", "./plugins/SpecializedDrops/settings.yml");
         collections = Config.loadFromPlugin(getInstance().getClass(), "Collections/collections.yml", "./plugins/SpecializedDrops/Collections/collections.yml");
         overrides = Config.loadFromPlugin(getInstance().getClass(), "Overrides/overrides.yml", "./plugins/SpecializedDrops/Overrides/overrides.yml");
