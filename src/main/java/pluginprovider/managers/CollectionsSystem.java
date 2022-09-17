@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ItemGroup {
+public class CollectionsSystem {
 
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
@@ -40,7 +40,7 @@ public class ItemGroup {
                 double percentage = one_i/of_i;
                 collectionDrops.add(new CachedItem(item.getPath(), percentage));
             }
-            collectionsCache.put(name, new ItemGroup(collectionDrops, collections.getStringList("Collections." + name + ".Includes"), collections.getInt("Collections." + name + ".MaxDrops"), collections.getBoolean("Collections." + name + ".DropWithDefaults")));
+            collectionsCache.put(name, new CollectionsSystem(collectionDrops, collections.getStringList("Collections." + name + ".Includes"), collections.getInt("Collections." + name + ".MaxDrops"), collections.getBoolean("Collections." + name + ".DropWithDefaults")));
         }
     }
 
@@ -49,14 +49,14 @@ public class ItemGroup {
     ////////////////////////////////////////////////////////////////
 
     // Public API
-    private static final Map<String, ItemGroup> collectionsCache = new HashMap<>();
-    public static ItemGroup getCollectionByName(String name) {
+    private static final Map<String, CollectionsSystem> collectionsCache = new HashMap<>();
+    public static CollectionsSystem getCollectionByName(String name) {
         return collectionsCache.get(name);
     }
-    public static ItemGroup getRandomCollection() {
+    public static CollectionsSystem getRandomCollection() {
         return StringUtils.getRandomFromList(getCollections().parallelStream().collect(Collectors.toList()));
     }
-    public static Collection<ItemGroup> getCollections() {
+    public static Collection<CollectionsSystem> getCollections() {
         return collectionsCache.values();
     }
     public static Set<String> getCollectionNames() {
@@ -74,7 +74,7 @@ public class ItemGroup {
     private final boolean withDefaults;
 
     // Constructor
-    public ItemGroup(List<CachedItem> collectionDrops, List<String> collectionIncludes, int maxDrops, boolean withDefaults) {
+    public CollectionsSystem(List<CachedItem> collectionDrops, List<String> collectionIncludes, int maxDrops, boolean withDefaults) {
         this.collectionDrops = collectionDrops;
         this.collectionIncludes = collectionIncludes;
         this.maxDrops = maxDrops;

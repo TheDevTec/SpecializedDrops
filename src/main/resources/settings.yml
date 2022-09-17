@@ -54,6 +54,10 @@ System:
       #   - BasedBlocks
       #
       # If You don't want to include anything -> Includes: []
+      Undefined_Types:
+        Enabled: true
+        Folder: "Undefineds"
+        Includes: []
       Glass_Types:
         Enabled: true
         Folder: "Glasses"

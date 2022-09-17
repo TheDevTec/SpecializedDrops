@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Code Clean-Up">
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Improved readItem() in Processor.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/OverrideSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/ItemGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/axe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/axe.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/pickaxe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/pickaxe.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/shovel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/shovel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/sword.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/sword.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Items/example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Items/example.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/settings.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663424461996</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="- Improved readItem() in Processor.java">
+      <created>1663425790224</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663425790224</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +213,7 @@
     <MESSAGE value="- Added supportive methods... (In Processor.java)&#10;- Advanced drop system (Counts with Additional &amp; List&lt;Drops&gt;)" />
     <MESSAGE value="- Quick fixes" />
     <MESSAGE value="- Code Clean-Up" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code Clean-Up" />
+    <MESSAGE value="- Improved readItem() in Processor.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Improved readItem() in Processor.java" />
   </component>
 </project>

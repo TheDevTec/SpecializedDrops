@@ -2,6 +2,7 @@ package pluginprovider.enums;
 
 public enum ProvidedBlockDropType {
 
+    UNDEFINED_TYPE(),
     GLASS_TYPE(),
     ADVANTAGE_TYPE(),
     BASED_BLOCK_TYPE(),

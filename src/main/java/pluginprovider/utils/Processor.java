@@ -89,8 +89,7 @@ public class Processor {
 
     // Material
     public static XMaterial parseMaterial(String material) {
-        if (XMaterial.matchXMaterial(material).isPresent()) return XMaterial.matchXMaterial(material).get();
-        return null;
+        return XMaterial.matchXMaterial(material).orElse(null);
     }
 
     // DropEvents executor

@@ -1,7 +1,6 @@
 package pluginprovider.objects;
 
 import me.devtec.shared.dataholder.Config;
-import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 
 import java.util.ArrayList;
