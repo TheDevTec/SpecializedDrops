@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Added functional items">
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Updated README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663516926328</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="- Updated README.md">
+      <created>1663519095563</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1663519095563</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +242,6 @@
     <MESSAGE value="- Fixed-up code (Works in game)&#10;- asyncPickRandomItem in ItemGroup.java has to be recalculated..." />
     <MESSAGE value="- Fixed-up code&#10;- Added Profile.java (Override.java has to be coded)&#10;- Fixed asyncRandomItemStack();&#10;- Added Overrides folder" />
     <MESSAGE value="- Updated Code's folder" />
-    <MESSAGE value="- Updated README.md" />
     <MESSAGE value="- Added /Items&#10;- Pre-created settings.yml&#10;- Edited workspace.xml&#10;- Added Factors.java entity constructor" />
     <MESSAGE value="- Some fixes" />
     <MESSAGE value="- Added supportive methods... (In Processor.java)&#10;- Advanced drop system (Counts with Additional &amp; List&lt;Drops&gt;)" />
@@ -248,6 +253,7 @@
     <MESSAGE value="- Registered all blocks...&#10;- Quick fixes...&#10;- Code cleanup" />
     <MESSAGE value="- Completed MainSystem.java&#10;- Override has to be fixed! @M3II0&#10;- Code cleanup" />
     <MESSAGE value="- Added functional items" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added functional items" />
+    <MESSAGE value="- Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Updated README.md" />
   </component>
 </project>

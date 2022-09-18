@@ -21,13 +21,22 @@ No, but if You want to use it correctly, make sure about
 - TheAPI in /plugins folder (TheAPI is depend for this source)
 
 <p align="center">
-  <img src="https://paste.sk/images/fRRQUY.png" />
+  <img src="https://paste.sk/images/fRRQUY.png"/>
 </p>
 
 ## Read this!
-Every our configuration file has detailed comments to every Function that You can configure...
-If you want to reset plugin's folder -> Just remove /SpecializedDrops and restart server!
+- Every our configuration file has detailed comments to every Function that You can configure...
+- If you want to reset plugin's folder -> Just remove /SpecializedDrops and restart server!
+- We have a lot of functions, and a lot of customizable modules, that's why we have a few configuration files...
+- We'll be glad if You write us your new ideas to add to this source!
+- If You've problems with configuration, make sure that You've read all comments describes your problem...
+- If comments don't work, contact us on our Discord!
 
+<h3 align="center">Our Discord:</h3>
+<a href="https://discord.gg/Xd68nahk">
+<p  align="center"> 
+<img alt="Qries" src="https://paste.sk/images/MjWrSR.png">
+</p></a>
 
 ## Configuration files
 ### File settings.yml
