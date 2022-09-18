@@ -58,82 +58,82 @@ System:
       Undefined_Types:
         Enabled: true
         Folder: "Undefineds"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Glass_Types:
         Enabled: true
         Folder: "Glasses"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Advantage_Types:
         Enabled: true
         Folder: "Advantages"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Based_Block_Types:
         Enabled: true
         Folder: "BasedBlocks"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Design_Types:
         Enabled: true
         Folder: "Designs"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Using_Types:
         Enabled: true
         Folder: "Usings"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Electricity_Types:
         Enabled: true
         Folder: "Electricities"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Plants_Types:
         Enabled: true
         Folder: "Plants"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Snow_Types:
         Enabled: true
         Folder: "Snows"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Dirt_Types:
         Enabled: true
         Folder: "Dirts"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Sand_Types:
         Enabled: true
         Folder: "Sands"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Stone_Types:
         Enabled: true
         Folder: "Stones"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Deep_Stone_Types:
         Enabled: true
         Folder: "DeepStones"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Ore_Types:
         Enabled: true
         Folder: "Ores"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Wood_Types:
         Enabled: true
         Folder: "Woods"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       Food_Types:
         Enabled: true
         Folder: "Foods"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
     # Setup drops for entities
     Entities:
@@ -141,11 +141,11 @@ System:
       Mob_Types:
         Enabled: true
         Folder: "Mobs"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []
       # Friendly types contains every friendly entity
       Friendly_Types:
         Enabled: true
         Folder: "Friends"
-        DefaultChance: 75.0
+        DefaultChance: 95.0
         Includes: []

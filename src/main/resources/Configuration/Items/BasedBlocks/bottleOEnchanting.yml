@@ -4,14 +4,14 @@
 # You can use 1.13+ ID's or if you want you can also you 1.13- ID's
 # 1.13+ -> Like BLACK_WOOL
 # 1.13- -> Like 2:2
-Material: GUNPOWDER
+Material: BOTTLE_O_ENCHANTING
 # You can use classic colors...
 # With 1.16 or higher you can use gradient & rgb
 # Gradient example: !{hex-color}Your text!{hex-color}
 # Rgb example: #{hex-color}Your text!
-Name: "&7Dirt dust"
+Name: ""
 # Don't use colors in legacy text!
-LegacyName: "Dirt Dust"
+LegacyName: "Bottle 'o enchanting"
 # Use '1' in non-stackable items like Sword or Bucket
 # If you want use Random... -> Example:
 # Amount: ~Random(min, max)
@@ -31,7 +31,7 @@ Enchantments: []
 #      | 1/10000 - 0.01%
 #      | 1/100000 - 0.001%
 #      | 1/1000000 - 0.0001%
-DropPercentage: "50/1"
+DropPercentage: "1/20"
 # If you enable this option... This item will drop with default drop...
 IsAdditional: true
 # In every line, message you can use Colors... With 1.16 or higher Gradient & Rgb

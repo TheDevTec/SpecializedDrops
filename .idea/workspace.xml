@@ -4,26 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Registered all blocks...&#10;- Quick fixes...&#10;- Code cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Dirts/dirtDust.yml" afterDir="false" />
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Completed MainSystem.java&#10;- Override has to be fixed! @M3II0&#10;- Code cleanup">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Advantages/ghastTear.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/BasedBlocks/bottleOEnchanting.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/DeepStones/goatHorn.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Designs/designerTool.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Electricities/electricity.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Foods/string.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Glasses/glowLichen.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Ores/oreFlint.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Plants/seeds.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Sands/goldNugget.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Snows/ball.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Stones/hiddenBone.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Undefineds/defineMe.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Usings/hiddenDocument.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Woods/woodChip.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/OverrideSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/OverrideSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/axe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Collections/MagicCollection/axe.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/pickaxe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Collections/MagicCollection/pickaxe.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/shovel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Collections/MagicCollection/shovel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/MagicCollection/sword.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Collections/MagicCollection/sword.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Collections/collections.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Collections/collections.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Items/example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/example.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Overrides/Profiles/profile_example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Overrides/Profiles/profile_example.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Overrides/overrides.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Overrides/overrides.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Dirts/dirtDust.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/Dirts/dirtDust.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Configuration/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/settings.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/Items/Dirts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/Configuration/Items/Advantages" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.53965783" />
@@ -60,10 +60,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Items\Dirts" />
-      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Collections\MagicCollection" />
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Advantages" />
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\BasedBlocks" />
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\DeepStones" />
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Designs" />
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Electricities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Foods" />
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -212,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663448900333</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Completed MainSystem.java&#10;- Override has to be fixed! @M3II0&#10;- Code cleanup">
+      <created>1663507630728</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663507630728</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +255,7 @@
     <MESSAGE value="- Registering Materials to Types... Completed: (A-C)" />
     <MESSAGE value="- Registering Materials to Types... Completed: (A-C)&#10;- Created OverrideSystem.java" />
     <MESSAGE value="- Registered all blocks...&#10;- Quick fixes...&#10;- Code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Registered all blocks...&#10;- Quick fixes...&#10;- Code cleanup" />
+    <MESSAGE value="- Completed MainSystem.java&#10;- Override has to be fixed! @M3II0&#10;- Code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Completed MainSystem.java&#10;- Override has to be fixed! @M3II0&#10;- Code cleanup" />
   </component>
 </project>

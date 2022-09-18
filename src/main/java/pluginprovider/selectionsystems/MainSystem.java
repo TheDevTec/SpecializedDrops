@@ -58,6 +58,10 @@ public class MainSystem {
                 try {
                     List<ItemStack> selectedDrops = new ArrayList<>();
                     CachedAttributes var = items.getRandom();
+                    if (var == null) {
+                        dropItems(world, loc, defaultDrops);
+                        return;
+                    }
                     double one = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[0]);
                     double two = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[1]);
                     double ce = one/two;
@@ -68,7 +72,6 @@ public class MainSystem {
             }
         }.runTask();
     }
-
     private static void dropItems(World world, Location loc, List<ItemStack> drops) {
         Bukkit.getScheduler().runTask(SpecializedDrops.getInstance(), () -> {
             for (ItemStack var : drops) {
