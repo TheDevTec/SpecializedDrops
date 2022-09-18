@@ -2,9 +2,11 @@ package pluginprovider;
 
 import me.devtec.shared.dataholder.Config;
 import org.bukkit.Bukkit;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import pluginprovider.enums.ProvidedBlockDropType;
 import pluginprovider.listeners.BlockBreakEvent;
 import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.CollectionsSystem;
@@ -35,6 +37,24 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(new BlockBreakEvent(), this);
         Bukkit.getPluginManager().registerEvents(new EntityDeathEvent(), this);
+        //
+        StringBuilder enchantments = new StringBuilder();
+        for (Enchantment ench : Enchantment.values()) {
+            if (ench != null) enchantments.append("- ").append(ench.getName()).append("\n");
+        }
+        StringBuilder dropTypes = new StringBuilder();
+        for (ProvidedBlockDropType blockTypes : ProvidedBlockDropType.values()) {
+            dropTypes.append(blockTypes.name()).append("\n");
+            for (String var : AdvancedTypes.getMaterialsByType(blockTypes)) {
+                dropTypes.append("- ").append(var).append("\n");
+            }
+        }
+        Bukkit.getLogger().info("\n" +
+                "# Enchants:\n" +
+                enchantments.toString() + "" +
+                "\n" +
+                "# DropTypes:\n" +
+                dropTypes.toString() + "");
     }
 
     @Override

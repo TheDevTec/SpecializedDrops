@@ -4,7 +4,9 @@ import me.devtec.theapi.bukkit.xseries.XMaterial;
 import org.bukkit.Material;
 import pluginprovider.enums.ProvidedBlockDropType;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AdvancedTypes {
@@ -841,6 +843,13 @@ public class AdvancedTypes {
     private static final Map<String, ProvidedBlockDropType> cache = new HashMap<>();
     public static ProvidedBlockDropType getByMaterial(Material material) {
         return cache.get(XMaterial.matchXMaterial(material).name());
+    }
+    public static List<String> getMaterialsByType(ProvidedBlockDropType type) {
+        List<String> value = new ArrayList<>();
+        for (String var : cache.keySet()) {
+            if (cache.get(var)==type) value.add(var);
+        }
+        return value;
     }
 
     ////////////////////////////////////////////////////////////////
