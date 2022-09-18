@@ -55,7 +55,7 @@ public class Processor {
                 while (entries.hasMoreElements()) {
                     ZipEntry entry = entries.nextElement();
                     if (entry.getName().startsWith(fileName) && !entry.getName().endsWith("/")) {
-                        Config.loadFromPlugin(p.getClass(), entry.getName(), p.getDataFolder().toPath() + "/" + entry.getName()).save(DataType.YAML);
+                        Config.loadFromPlugin(p.getClass(), entry.getName(), p.getDataFolder().toPath() + "/" + entry.getName().replace(fileName, "")).save(DataType.YAML);
                     }
                 }
                 jar.close();
@@ -84,6 +84,19 @@ public class Processor {
         for (Enchantment var : enchantsReader.keySet()) {
             if (var != null) value.addEnchantment(var, enchantsReader.get(var));
         }
+        return value;
+    }
+    public static ItemStack readAndExecute(CachedAttributes rawItem) {
+        ItemStack value = ItemMaker.of(parseMaterial(rawItem.getMaterial()).parseMaterial())
+                .displayName(rawItem.getName())
+                .amount(parseItemAmount(rawItem.getAmount()))
+                .customModel(rawItem.getCustomModelData())
+                .lore(rawItem.getLore()).build();
+        Map<Enchantment, Integer> enchantsReader = rawItem.getEnchantments();
+        for (Enchantment var : enchantsReader.keySet()) {
+            if (var != null) value.addEnchantment(var, enchantsReader.get(var));
+        }
+        asyncDropEvents(rawItem.getPath());
         return value;
     }
 

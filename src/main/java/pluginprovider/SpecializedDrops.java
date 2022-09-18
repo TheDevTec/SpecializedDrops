@@ -45,12 +45,10 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     ////////////////////////////////////////////////////////////////
 
     private void loadConfigurations() {
-        Processor.queryFolder(getInstance(), "Collections/");
-        Processor.queryFolder(getInstance(), "Overrides/");
-        Processor.queryFolder(getInstance(), "Items/");
-        settings = Config.loadFromPlugin(getInstance().getClass(), "settings.yml", "./plugins/SpecializedDrops/settings.yml");
-        collections = Config.loadFromPlugin(getInstance().getClass(), "Collections/collections.yml", "./plugins/SpecializedDrops/Collections/collections.yml");
-        overrides = Config.loadFromPlugin(getInstance().getClass(), "Overrides/overrides.yml", "./plugins/SpecializedDrops/Overrides/overrides.yml");
+        Processor.queryFolder(getInstance(), "Configuration/");
+        settings = Config.loadFromFile("./plugins/SpecializedDrops/settings.yml");
+        collections = Config.loadFromFile("./plugins/SpecializedDrops/Collections/collections.yml");
+        overrides = Config.loadFromFile("./plugins/SpecializedDrops/Overrides/overrides.yml");
     }
 
     ////////////////////////////////////////////////////////////////

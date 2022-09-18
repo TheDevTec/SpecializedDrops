@@ -20,7 +20,7 @@ public class OverrideSystem {
     public static void reloadOverrides() {
         if (!SpecializedDrops.getOverrides().getBoolean("Enabled")) return;
         Config var = SpecializedDrops.getOverrides();
-        for (String overrideName : var.getKeys("Overrides")) {
+        for (String overrideName : var.getKeys("Configuration/Overrides")) {
             if (var.getBoolean("Overrides." + overrideName + ".Enabled")) {
                 String profile = var.getString("Overrides." + overrideName + ".Profile");
                 String collection = var.getString("Overrides." + overrideName + ".Collection");

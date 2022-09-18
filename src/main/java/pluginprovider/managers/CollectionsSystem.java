@@ -24,7 +24,7 @@ public class CollectionsSystem {
         collectionsCache.clear();
         Config collections = SpecializedDrops.getCollections();
         final Map<String, File[]> collectionWorker = new HashMap<>();
-        for (String name : collections.getKeys("Collections")) {
+        for (String name : collections.getKeys("Configuration/Collections")) {
             String path = collections.getString("Collections." + name + ".FolderName");
             File collectionFolder = new File("./plugins/SpecializedDrops/Collections/" + path);
             collectionWorker.put(name, collectionFolder.listFiles());

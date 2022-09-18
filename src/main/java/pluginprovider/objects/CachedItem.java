@@ -17,6 +17,9 @@ public class CachedItem {
     public ItemStack asyncBuildStack() {
         return Processor.readItem(new CachedAttributes(pathToItem));
     }
+    public ItemStack asyncBuildAndExecute() {
+        return Processor.readAndExecute(new CachedAttributes(pathToItem));
+    }
     public CachedAttributes quickAttributes() {
         return new CachedAttributes(pathToItem);
     }
