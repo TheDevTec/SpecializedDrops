@@ -34,7 +34,7 @@ public class MainSystem {
                     return;
                 }
                 double chance = settings.getDouble(path + "DefaultChance");
-                if (!StringUtils.checkProbability(chance)) {
+                if (StringUtils.checkProbability(chance)) {
                     dropItems(world, loc, defaultDrops);
                     return;
                 }
