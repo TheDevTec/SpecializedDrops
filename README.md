@@ -330,3 +330,9 @@ Conditions:
   # Set value, if profile can use Fortune or Looting value
   Luck: false
 ```
+
+<h3 align="center">Looking for Types, Enchantments or something else..?</h3>
+<a href="https://github.com/TheDevTec/SpecializedDrops/blob/main/OTHERS.md">
+<p  align="center"> 
+<img alt="Qries" src="https://paste.sk/images/WujGEP.png">
+</p></a>
