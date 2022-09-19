@@ -9,6 +9,8 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import pluginprovider.objects.CachedAttributes;
+import pluginprovider.objects.DropExecutor;
+import pluginprovider.objects.Factors;
 
 import java.io.File;
 import java.io.IOException;
@@ -86,7 +88,7 @@ public class Processor {
         }
         return value;
     }
-    public static ItemStack readAndExecute(CachedAttributes rawItem) {
+    public static ItemStack readAndExecute(CachedAttributes rawItem, Factors factors) {
         ItemStack value = ItemMaker.of(parseMaterial(rawItem.getMaterial()).parseMaterial())
                 .displayName(rawItem.getName())
                 .amount(parseItemAmount(rawItem.getAmount()))
@@ -96,7 +98,7 @@ public class Processor {
         for (Enchantment var : enchantsReader.keySet()) {
             if (var != null) value.addEnchantment(var, enchantsReader.get(var));
         }
-        asyncDropEvents(rawItem.getPath());
+        asyncDropEvents(rawItem.getPath(), factors);
         return value;
     }
 
@@ -106,6 +108,8 @@ public class Processor {
     }
 
     // DropEvents executor
-    public static void asyncDropEvents(String path) {}
+    public static void asyncDropEvents(String path, Factors factors) {
+        new DropExecutor(Config.loadFromFile(path), factors, new CachedAttributes(path)).execute();
+    }
 
 }

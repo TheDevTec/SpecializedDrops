@@ -13,6 +13,7 @@ import pluginprovider.SpecializedDrops;
 import pluginprovider.enums.ProvidedBlockDropType;
 import pluginprovider.objects.CachedAttributes;
 import pluginprovider.objects.CachedItem;
+import pluginprovider.objects.Factors;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
 
 public class MainSystem {
 
-    public static void dropRequest(final World world, final Location loc, final ProvidedBlockDropType blockType, final BlockBreakEvent e, final List<ItemStack> defaultDrops) {
+    public static void dropRequest(Factors factors, final World world, final Location loc, final ProvidedBlockDropType blockType, final BlockBreakEvent e, final List<ItemStack> defaultDrops) {
         new Tasker() {
             @Override
             public void run() {
@@ -65,7 +66,7 @@ public class MainSystem {
                     double one = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[0]);
                     double two = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[1]);
                     double ce = one/two;
-                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute());
+                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(factors));
                     if (var.isAdditional()) selectedDrops.addAll(defaultDrops);
                     dropItems(world, loc, selectedDrops);
                 } catch (Exception e) {e.printStackTrace();}

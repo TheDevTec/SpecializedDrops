@@ -7,6 +7,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.enums.ProvidedBlockDropType;
+import pluginprovider.objects.Factors;
 import pluginprovider.selectionsystems.MainSystem;
 import pluginprovider.utils.AdvancedTypes;
 
@@ -23,7 +24,8 @@ public class BlockBreakEvent implements Listener {
         ProvidedBlockDropType blockType = AdvancedTypes.getByMaterial(e.getBlock().getType());
         World world = e.getBlock().getWorld();
         Location loc = e.getBlock().getLocation();
-        MainSystem.dropRequest(world, loc, blockType, e, defaultDrops);
+        Factors factors = new Factors(e);
+        MainSystem.dropRequest(factors, world, loc, blockType, e, defaultDrops);
     }
 
 }

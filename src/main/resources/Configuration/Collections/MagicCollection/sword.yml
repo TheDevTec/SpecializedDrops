@@ -45,6 +45,7 @@ DropPercentage: "25/100"
 #               {DropColorizedName} -> Name of drop (Colorized)
 # If you want to remove some Event, just remove section...
 DropEvents:
+  ActionBar: "&cCongratulations!"
   Title:
     Line1: "Congratulations!"
     Line2: "You've received special drop..."
