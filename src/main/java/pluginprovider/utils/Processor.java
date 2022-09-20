@@ -26,19 +26,6 @@ public class Processor {
 
     private static final String folderPath = "/plugins/SpecializedDrops/";
 
-    // Load file
-    public static void queryFile(Plugin p, String fileName) {
-        if (!p.getDataFolder().exists()) p.getDataFolder().mkdir();
-        File[] files = p.getDataFolder().listFiles();
-        boolean save = true;
-        assert files != null;
-        for (File var : files) {
-            String name = var.getName();
-            if (fileName.equalsIgnoreCase(name)) save = false;
-        }
-        p.saveResource(fileName, save);
-    }
-
     // Load directory
     public static void queryFolder(Plugin p, String fileName) {
         try {

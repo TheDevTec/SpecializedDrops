@@ -25,7 +25,7 @@ public class MainSystem {
             @Override
             public void run() {
                 ProvidedBlockDropType block = (ProvidedBlockDropType) info.getCorrect();
-                if (OverrideSystem.override(info)) {
+                if (OverrideSystem.override(info).size() > 0) {
                     return;
                 }
                 Config settings = SpecializedDrops.getSettings();

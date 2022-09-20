@@ -7,6 +7,8 @@ import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
 import pluginprovider.objects.CachedAttributes;
 import pluginprovider.objects.CachedItem;
+import pluginprovider.objects.EventInfo;
+import pluginprovider.objects.Factors;
 import pluginprovider.utils.Processor;
 
 import java.io.File;
@@ -82,19 +84,19 @@ public class CollectionsSystem {
     }
 
     // Functions
-    public List<ItemStack> asyncPickRandomItems(List<ItemStack> defaultDrops) {
+    public List<ItemStack> asyncPickRandomItems(EventInfo info) {
         List<ItemStack> drops = new ArrayList<>();
         PercentageList<CachedItem> randomize = getPercentageCollection();
         for (int c = 0; c <= maxDrops; ++c) {
             CachedItem selected = randomize.getRandom();
-            runAsyncDropEvents(selected.quickAttributes());
+            runAsyncDropEvents(selected.quickAttributes(), info.getFactors());
             drops.add(selected.asyncBuildStack());
         }
-        if (withDefaults) drops.addAll(defaultDrops);
+        if (withDefaults) drops.addAll(info.getDefaultDrop());
         return drops;
     }
-    public void runAsyncDropEvents(CachedAttributes rawItem) {
-        Processor.asyncDropEvents(rawItem.getPath());
+    public void runAsyncDropEvents(CachedAttributes rawItem, Factors factors) {
+        Processor.asyncDropEvents(rawItem.getPath(), factors);
     }
 
     // Getter

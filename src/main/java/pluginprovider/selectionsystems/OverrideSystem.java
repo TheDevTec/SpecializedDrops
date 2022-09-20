@@ -36,13 +36,12 @@ public class OverrideSystem {
 
     // PublicAPI
     private static final List<OverrideSystem> overrides = new ArrayList<>();
-    public static boolean override(EventInfo info) {
-        if (!SpecializedDrops.getOverrides().getBoolean("Enabled")) return false;
-        boolean value = false;
+    public static List<ItemStack> override(EventInfo info) {
+        if (!SpecializedDrops.getOverrides().getBoolean("Enabled")) return new ArrayList<>();
+        List<ItemStack> value = new ArrayList<>();
         for (OverrideSystem check : overrides) {
             if (check.getProfile().asyncCheckWith(info)) {
-                value = true;
-                check.getGroup().asyncPickRandomItems(info.getDefaultDrop());
+                value = check.getGroup().asyncPickRandomItems(info);
             }
         }
         return value;
