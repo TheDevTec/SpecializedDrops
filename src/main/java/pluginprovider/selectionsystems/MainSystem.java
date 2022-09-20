@@ -25,9 +25,9 @@ public class MainSystem {
             @Override
             public void run() {
                 ProvidedBlockDropType block = (ProvidedBlockDropType) info.getCorrect();
-                // if (OverrideSystem.override(e, defaultDrops)) {
-                //     return;
-                // }
+                if (OverrideSystem.override(info)) {
+                    return;
+                }
                 Config settings = SpecializedDrops.getSettings();
                 String path = "System.MainSystem.Blocks." + block.getDataPath() + ".";
                 if (!settings.getBoolean(path + "Enabled")) {

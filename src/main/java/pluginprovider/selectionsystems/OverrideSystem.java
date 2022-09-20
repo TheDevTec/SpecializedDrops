@@ -5,6 +5,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
 import pluginprovider.managers.CollectionsSystem;
+import pluginprovider.objects.EventInfo;
 import pluginprovider.objects.Profile;
 
 import java.util.ArrayList;
@@ -35,13 +36,13 @@ public class OverrideSystem {
 
     // PublicAPI
     private static final List<OverrideSystem> overrides = new ArrayList<>();
-    public static boolean override(final BlockBreakEvent e, List<ItemStack> defaultDrops) {
+    public static boolean override(EventInfo info) {
         if (!SpecializedDrops.getOverrides().getBoolean("Enabled")) return false;
         boolean value = false;
         for (OverrideSystem check : overrides) {
-            if (check.getProfile().asyncCheckWith(e)) {
+            if (check.getProfile().asyncCheckWith(info)) {
                 value = true;
-                check.getGroup().asyncPickRandomItems(defaultDrops);
+                check.getGroup().asyncPickRandomItems(info.getDefaultDrop());
             }
         }
         return value;

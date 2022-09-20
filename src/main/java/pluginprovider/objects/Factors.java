@@ -1,11 +1,11 @@
 package pluginprovider.objects;
 
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.entity.EntityDeathEvent;
 import pluginprovider.enums.factors.FactorsDataType;
 import pluginprovider.enums.factors.valuetypes.FactorsLookingValueType;
 import pluginprovider.enums.factors.valuetypes.FactorsTimeValueType;
@@ -18,39 +18,39 @@ public class Factors {
     private final Map<FactorsDataType, Object> dataType_dataValue;
     private final boolean isBlock;
 
-    public Factors(final BlockBreakEvent e, String... permissions) {
+    public Factors(Block block, Player p, String... permissions) {
         isBlock = true;
         dataType_dataValue = new HashMap<>();
         // Time
         FactorsTimeValueType day_night;
-        if (e.getBlock().getWorld().getTime() < 12300 | e.getBlock().getWorld().getTime() > 23850) day_night = FactorsTimeValueType.DAY;
+        if (block.getWorld().getTime() < 12300 | block.getWorld().getTime() > 23850) day_night = FactorsTimeValueType.DAY;
         else day_night = FactorsTimeValueType.NIGHT;
         // Permission
         boolean permission = true;
         for (String var : permissions) {
-            if (!e.getPlayer().hasPermission(var)) permission = false;
+            if (!p.hasPermission(var)) permission = false;
         }
         // World
-        String worldName = e.getBlock().getWorld().getName();
+        String worldName = block.getWorld().getName();
         // -> Block / !-> Entity
-        Material blockType = e.getBlock().getType();
+        Material blockType = block.getType();
         // Sneaking
-        boolean isSneaking = e.getPlayer().isSneaking();
+        boolean isSneaking = p.isSneaking();
         // Biome name
-        String biomeName = e.getBlock().getBiome().name();
+        String biomeName = block.getBiome().name();
         // Raining
-        boolean isRaining = e.getBlock().getWorld().hasStorm();
+        boolean isRaining = block.getWorld().hasStorm();
         // Killed / Destroyed by
-        String playerName = e.getPlayer().getName();
+        String playerName = p.getName();
         // !-> Looting / -> Fortune
-        boolean canCheck = e.getPlayer().getItemInUse() != null;
+        boolean canCheck = p.getItemInUse() != null;
         boolean hasFortune;
-        if (canCheck) hasFortune = e.getPlayer().getItemInUse().getEnchantments().containsKey(Enchantment.LOOT_BONUS_BLOCKS);
+        if (canCheck) hasFortune = p.getItemInUse().getEnchantments().containsKey(Enchantment.LOOT_BONUS_BLOCKS);
         else hasFortune = false;
         // Looking
         FactorsLookingValueType up_down = FactorsLookingValueType.STRAIGHT;
-        if (e.getPlayer().getLocation().getPitch() < -30) up_down = FactorsLookingValueType.UP;
-        if (e.getPlayer().getLocation().getPitch() > 30) up_down = FactorsLookingValueType.DOWN;
+        if (p.getLocation().getPitch() < -30) up_down = FactorsLookingValueType.UP;
+        if (p.getLocation().getPitch() > 30) up_down = FactorsLookingValueType.DOWN;
         //
         // Register
         //
@@ -65,39 +65,39 @@ public class Factors {
         dataType_dataValue.put(FactorsDataType.FORTUNE_LOOTING, hasFortune);
         dataType_dataValue.put(FactorsDataType.LOOKING, up_down);
     }
-    public Factors(final EntityDeathEvent e, Player killer, String... permissions) {
+    public Factors(Entity entity, Player p, String... permissions) {
         isBlock = true;
         dataType_dataValue = new HashMap<>();
         // Time
         FactorsTimeValueType day_night;
-        if (e.getEntity().getWorld().getTime() < 12300 | e.getEntity().getWorld().getTime() > 23850) day_night = FactorsTimeValueType.DAY;
+        if (entity.getWorld().getTime() < 12300 | entity.getWorld().getTime() > 23850) day_night = FactorsTimeValueType.DAY;
         else day_night = FactorsTimeValueType.NIGHT;
         // Permission
         boolean permission = true;
         for (String var : permissions) {
-            if (!e.getEntity().hasPermission(var)) permission = false;
+            if (!entity.hasPermission(var)) permission = false;
         }
         // World
-        String worldName = e.getEntity().getWorld().getName();
+        String worldName = entity.getWorld().getName();
         // -> Block / !-> Entity
-        EntityType blockType = e.getEntity().getType();
+        EntityType blockType = entity.getType();
         // Sneaking
-        boolean isSneaking = killer.isSneaking();
+        boolean isSneaking = p.isSneaking();
         // Biome name
-        String biomeName = e.getEntity().getLocation().getBlock().getBiome().name();
+        String biomeName = entity.getLocation().getBlock().getBiome().name();
         // Raining
-        boolean isRaining = e.getEntity().getWorld().hasStorm();
+        boolean isRaining = entity.getWorld().hasStorm();
         // Killed / Destroyed by
-        String playerName = killer.getName();
+        String playerName = p.getName();
         // !-> Looting / -> Fortune
-        boolean canCheck = killer.getItemInUse() != null;
+        boolean canCheck = p.getItemInUse() != null;
         boolean hasFortune;
-        if (canCheck) hasFortune = killer.getItemInUse().getEnchantments().containsKey(Enchantment.LOOT_BONUS_BLOCKS);
+        if (canCheck) hasFortune = p.getItemInUse().getEnchantments().containsKey(Enchantment.LOOT_BONUS_BLOCKS);
         else hasFortune = false;
         // Looking
         FactorsLookingValueType up_down = FactorsLookingValueType.STRAIGHT;
-        if (killer.getLocation().getPitch() < -30) up_down = FactorsLookingValueType.UP;
-        if (killer.getLocation().getPitch() > 30) up_down = FactorsLookingValueType.DOWN;
+        if (p.getLocation().getPitch() < -30) up_down = FactorsLookingValueType.UP;
+        if (p.getLocation().getPitch() > 30) up_down = FactorsLookingValueType.DOWN;
         //
         // Register
         //

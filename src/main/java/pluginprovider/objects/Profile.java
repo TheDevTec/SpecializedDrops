@@ -1,7 +1,6 @@
 package pluginprovider.objects;
 
 import me.devtec.shared.dataholder.Config;
-import org.bukkit.event.block.BlockBreakEvent;
 import pluginprovider.enums.factors.FactorsDataType;
 import pluginprovider.enums.factors.valuetypes.FactorsLookingValueType;
 import pluginprovider.enums.factors.valuetypes.FactorsTimeValueType;
@@ -71,60 +70,59 @@ public class Profile {
     }
 
     // Functions
-    public boolean asyncCheckWith(final BlockBreakEvent e) {
+    public boolean asyncCheckWith(EventInfo info) {
         boolean returner = true;
-        Factors destroyFactors = new Factors(e, ((List<String>) values.get(FactorsDataType.PERMISSION)).parallelStream().toArray(String[]::new));
         // Time
         if (values.get(FactorsDataType.TIME) != null) {
-            if (destroyFactors.getTimeValue() != (FactorsTimeValueType) values.get(FactorsDataType.TIME))
+            if (info.getFactors().getTimeValue() != (FactorsTimeValueType) values.get(FactorsDataType.TIME))
                 returner = false;
         }
         // Permission
         if (values.get(FactorsDataType.PERMISSION) != null) {
-            if (!destroyFactors.getPermissionsValue()) returner = false;
+            if (!info.getFactors().getPermissionsValue()) returner = false;
         }
         // World
         if (values.get(FactorsDataType.WORLD) != null) {
-            if (!((String) values.get(FactorsDataType.WORLD)).equalsIgnoreCase(destroyFactors.getWorldValue()))
+            if (!((String) values.get(FactorsDataType.WORLD)).equalsIgnoreCase(info.getFactors().getWorldValue()))
                 returner = false;
         }
         // Block / Entity
         if (values.get(FactorsDataType.BLOCK_ENTITY) != null) {
-            if (destroyFactors.getEntityValue() != null) {
-                if (!destroyFactors.getEntityValue().name().equalsIgnoreCase((String) values.get(FactorsDataType.BLOCK_ENTITY)))
+            if (info.getFactors().getEntityValue() != null) {
+                if (!info.getFactors().getEntityValue().name().equalsIgnoreCase((String) values.get(FactorsDataType.BLOCK_ENTITY)))
                     returner = false;
             }
-            if (destroyFactors.getBlockValue() != null) {
-                if (!destroyFactors.getBlockValue().name().equalsIgnoreCase((String) values.get(FactorsDataType.BLOCK_ENTITY)))
+            if (info.getFactors().getBlockValue() != null) {
+                if (!info.getFactors().getBlockValue().name().equalsIgnoreCase((String) values.get(FactorsDataType.BLOCK_ENTITY)))
                     returner = false;
             }
         }
         // Sneaking
         if (values.get(FactorsDataType.SNEAKING) != null) {
-            if (destroyFactors.getSneakingValue() != (Boolean) values.get(FactorsDataType.SNEAKING)) returner = false;
+            if (info.getFactors().getSneakingValue() != (Boolean) values.get(FactorsDataType.SNEAKING)) returner = false;
         }
         // Biome
         if (values.get(FactorsDataType.BIOME) != null) {
-            if (!destroyFactors.getBiomeValue().equalsIgnoreCase((String) values.get(FactorsDataType.BIOME)))
+            if (!info.getFactors().getBiomeValue().equalsIgnoreCase((String) values.get(FactorsDataType.BIOME)))
                 returner = false;
         }
         // Raining
         if (values.get(FactorsDataType.RAINING) != null) {
-            if (destroyFactors.getRainingValue() != (Boolean) values.get(FactorsDataType.RAINING)) returner = false;
+            if (info.getFactors().getRainingValue() != (Boolean) values.get(FactorsDataType.RAINING)) returner = false;
         }
         // Killed/Destroyed by
         if (values.get(FactorsDataType.KILLED_DESTROYED_BY) != null) {
-            if (!destroyFactors.getDestroyerOrKillerValue().equalsIgnoreCase((String) values.get(FactorsDataType.KILLED_DESTROYED_BY)))
+            if (!info.getFactors().getDestroyerOrKillerValue().equalsIgnoreCase((String) values.get(FactorsDataType.KILLED_DESTROYED_BY)))
                 returner = false;
         }
         // Fortune/Looting
         if (values.get(FactorsDataType.FORTUNE_LOOTING) != null) {
-            if (destroyFactors.getFortuneLootingValue() != (Boolean) values.get(FactorsDataType.FORTUNE_LOOTING))
+            if (info.getFactors().getFortuneLootingValue() != (Boolean) values.get(FactorsDataType.FORTUNE_LOOTING))
                 returner = false;
         }
         // Looking
         if (values.get(FactorsDataType.LOOKING) != null) {
-            if (destroyFactors.getLookingValue() != (FactorsLookingValueType) values.get(FactorsDataType.LOOKING))
+            if (info.getFactors().getLookingValue() != (FactorsLookingValueType) values.get(FactorsDataType.LOOKING))
                 returner = false;
         }
         return returner;
