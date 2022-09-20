@@ -2,7 +2,9 @@ package pluginprovider.utils;
 
 import me.devtec.theapi.bukkit.xseries.XMaterial;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
 import pluginprovider.enums.ProvidedBlockDropType;
+import pluginprovider.enums.ProvidedEntityDropType;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -841,6 +843,7 @@ public class AdvancedTypes {
 
     // Public API
     private static final Map<String, ProvidedBlockDropType> cache = new HashMap<>();
+    private static final Map<String, ProvidedEntityDropType> cache1 = new HashMap<>();
     public static ProvidedBlockDropType getByMaterial(Material material) {
         return cache.get(XMaterial.matchXMaterial(material).name());
     }
@@ -848,6 +851,16 @@ public class AdvancedTypes {
         List<String> value = new ArrayList<>();
         for (String var : cache.keySet()) {
             if (cache.get(var)==type) value.add(var);
+        }
+        return value;
+    }
+    public static ProvidedEntityDropType getByEntityType(EntityType type) {
+        return cache1.get(type.name().toUpperCase());
+    }
+    public static List<String> getEntitiesByType(ProvidedEntityDropType type) {
+        List<String> value = new ArrayList<>();
+        for (String var : cache1.keySet()) {
+            if (cache1.get(var) == type) value.add(var);
         }
         return value;
     }

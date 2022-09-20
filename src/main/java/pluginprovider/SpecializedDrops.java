@@ -2,10 +2,7 @@ package pluginprovider;
 
 import me.devtec.shared.dataholder.Config;
 import org.bukkit.Bukkit;
-import org.bukkit.NamespacedKey;
 import org.bukkit.event.Listener;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import pluginprovider.listeners.BlockBreakEvent;
@@ -39,27 +36,6 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(new BlockBreakEvent(), this);
         Bukkit.getPluginManager().registerEvents(new EntityDeathEvent(), this);
     }
-
-    // Helper builder
-    /*
-    *         StringBuilder enchantments = new StringBuilder();
-        for (Enchantment ench : Enchantment.values()) {
-            if (ench != null) enchantments.append("- ").append(ench.getName()).append("\n");
-        }
-        StringBuilder dropTypes = new StringBuilder();
-        for (ProvidedBlockDropType blockTypes : ProvidedBlockDropType.values()) {
-            dropTypes.append(blockTypes.name()).append("\n");
-            for (String var : AdvancedTypes.getMaterialsByType(blockTypes)) {
-                dropTypes.append("- ").append(var).append("\n");
-            }
-        }
-        Bukkit.getLogger().info("\n" +
-                "# Enchants:\n" +
-                enchantments.toString() + "" +
-                "\n" +
-                "# DropTypes:\n" +
-                dropTypes.toString() + "");
-    * */
 
     @Override
     public void onDisable() {}

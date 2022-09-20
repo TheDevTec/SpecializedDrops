@@ -7,13 +7,12 @@ import me.devtec.shared.utility.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
 import pluginprovider.enums.ProvidedBlockDropType;
 import pluginprovider.objects.CachedAttributes;
 import pluginprovider.objects.CachedItem;
-import pluginprovider.objects.Factors;
+import pluginprovider.objects.EventInfo;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -21,22 +20,23 @@ import java.util.List;
 
 public class MainSystem {
 
-    public static void dropRequest(Factors factors, final World world, final Location loc, final ProvidedBlockDropType blockType, final BlockBreakEvent e, final List<ItemStack> defaultDrops) {
+    public static void blockDropRequest(EventInfo info) {
         new Tasker() {
             @Override
             public void run() {
-                if (OverrideSystem.override(e, defaultDrops)) {
-                    return;
-                }
+                ProvidedBlockDropType block = (ProvidedBlockDropType) info.getCorrect();
+                // if (OverrideSystem.override(e, defaultDrops)) {
+                //     return;
+                // }
                 Config settings = SpecializedDrops.getSettings();
-                String path = "System.MainSystem.Blocks." + blockType.getDataPath() + ".";
+                String path = "System.MainSystem.Blocks." + block.getDataPath() + ".";
                 if (!settings.getBoolean(path + "Enabled")) {
-                    dropItems(world, loc, defaultDrops);
+                    dropItems(info.getWorld(), info.getLocation(), info.getDefaultDrop());
                     return;
                 }
                 double chance = settings.getDouble(path + "DefaultChance");
                 if (StringUtils.checkProbability(chance)) {
-                    dropItems(world, loc, defaultDrops);
+                    dropItems(info.getWorld(), info.getLocation(), info.getDefaultDrop());
                     return;
                 }
                 List<String> folders = new ArrayList<>();
@@ -60,18 +60,21 @@ public class MainSystem {
                     List<ItemStack> selectedDrops = new ArrayList<>();
                     CachedAttributes var = items.getRandom();
                     if (var == null) {
-                        dropItems(world, loc, defaultDrops);
+                        dropItems(info.getWorld(), info.getLocation(), info.getDefaultDrop());
                         return;
                     }
                     double one = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[0]);
                     double two = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[1]);
                     double ce = one/two;
-                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(factors));
-                    if (var.isAdditional()) selectedDrops.addAll(defaultDrops);
-                    dropItems(world, loc, selectedDrops);
+                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(info.getFactors()));
+                    if (var.isAdditional()) selectedDrops.addAll(info.getDefaultDrop());
+                    dropItems(info.getWorld(), info.getLocation(), selectedDrops);
                 } catch (Exception e) {e.printStackTrace();}
             }
         }.runTask();
+    }
+    public static void entityDropRequest(EventInfo info) {
+
     }
     private static void dropItems(World world, Location loc, List<ItemStack> drops) {
         Bukkit.getScheduler().runTask(SpecializedDrops.getInstance(), () -> {
