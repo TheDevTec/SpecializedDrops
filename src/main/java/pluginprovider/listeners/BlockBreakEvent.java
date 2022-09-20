@@ -18,7 +18,7 @@ public class BlockBreakEvent implements Listener {
         if (e.isCancelled()) return;
         e.setDropItems(false);
         List<ItemStack> defaultDrops = new ArrayList<>(e.getBlock().getDrops(e.getPlayer().getItemInUse()));
-        EventInfo info = EventInfo.parseEventInfo(e.getBlock(), new Factors(e), defaultDrops);
+        EventInfo info = EventInfo.parseEventInfo(e.getBlock(), new Factors(e.getBlock(), e.getPlayer()), defaultDrops);
         MainSystem.blockDropRequest(info);
     }
 
