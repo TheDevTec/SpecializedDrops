@@ -35,7 +35,7 @@ No, but if You want to use it correctly, make sure about
 <h3 align="center">Our Discord:</h3>
 <a href="https://discord.gg/Xd68nahk">
 <p  align="center"> 
-<img alt="Qries" src="https://paste.sk/images/MjWrSR.png">
+<img alt="Qries" src="https://github.com/TheDevTec/SpecializedDrops/blob/main/images/Logo/joinDiscord.png?raw=true">
 </p></a>
 
 ## Configuration files
@@ -335,5 +335,5 @@ Conditions:
 <h3 align="center">Looking for Types, Enchantments or something else..?</h3>
 <a href="https://github.com/TheDevTec/SpecializedDrops/blob/main/OTHERS.md">
 <p  align="center"> 
-<img alt="Qries" src="https://paste.sk/images/WujGEP.png">
+<img alt="Qries" src="https://github.com/TheDevTec/SpecializedDrops/blob/main/images/Logo/350x120.png?raw=true">
 </p></a>
