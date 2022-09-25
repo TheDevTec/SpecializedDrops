@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Updated Plugin's folder">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/updater/UpdateStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" afterDir="false" />
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Started menu creation...&#10;- Updated mob types into code&#10;- Created UpdateStatus.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedEntityDropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedEntityDropType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/axe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/axe.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/pickaxe.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/pickaxe.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/shovel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/shovel.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/sword.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration/Collections/MagicCollection/sword.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Configuration/Items/example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration/Items/example.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664122912489</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="- Started menu creation...&#10;- Updated mob types into code&#10;- Created UpdateStatus.java">
+      <created>1664142455874</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1664142455874</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,7 +314,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Cleanup code" />
     <MESSAGE value="- Added Factors.java" />
     <MESSAGE value="- Fixed-up code (Works in game)&#10;- asyncPickRandomItem in ItemGroup.java has to be recalculated..." />
     <MESSAGE value="- Fixed-up code&#10;- Added Profile.java (Override.java has to be coded)&#10;- Fixed asyncRandomItemStack();&#10;- Added Overrides folder" />
@@ -344,6 +338,7 @@
     <MESSAGE value="- Code cleanup" />
     <MESSAGE value="- MainSystem is completed..." />
     <MESSAGE value="- Updated Plugin's folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Updated Plugin's folder" />
+    <MESSAGE value="- Started menu creation...&#10;- Updated mob types into code&#10;- Created UpdateStatus.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Started menu creation...&#10;- Updated mob types into code&#10;- Created UpdateStatus.java" />
   </component>
 </project>

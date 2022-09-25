@@ -117,4 +117,9 @@ public class Processor {
         return "Not developed yet";
     }
 
+    // Boolean translator
+    public static String translateBoolean(boolean toTranslate, String falseColor, String trueColor) {
+        return String.valueOf(toTranslate).replace("false", falseColor + "No").replace("true", trueColor + "Yes");
+    }
+
 }

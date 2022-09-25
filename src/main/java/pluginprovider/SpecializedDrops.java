@@ -2,7 +2,6 @@ package pluginprovider;
 
 import me.devtec.shared.dataholder.Config;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.EntityType;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;

@@ -10,7 +10,8 @@ import pluginprovider.objects.EventInfo;
 import pluginprovider.objects.Factors;
 import pluginprovider.selectionsystems.MainSystem;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EntityDeathEvent implements Listener {
 

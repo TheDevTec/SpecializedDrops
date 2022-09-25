@@ -1,7 +1,6 @@
 package pluginprovider.selectionsystems;
 
 import me.devtec.shared.dataholder.Config;
-import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
 import pluginprovider.managers.CollectionsSystem;

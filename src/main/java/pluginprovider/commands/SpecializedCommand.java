@@ -59,7 +59,7 @@ public class SpecializedCommand {
         Map<Character, ItemGUI> items = new HashMap<>();
         List<String> layout = Arrays.asList(
                 "----h----",
-                "---------",
+                "-r-------",
                 "---------",
                 "---------",
                 "---------",
@@ -82,6 +82,10 @@ public class SpecializedCommand {
                 holderGUI.close(player);
             }
         });
+
+        // p
+        ItemStack r = SpecialItems.getRequester(p);
+        items.put('r', new EmptyItemGUI(r));
 
         Processor.importToMenu(items, layout, menu);
         return menu;

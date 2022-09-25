@@ -1,6 +1,7 @@
 package pluginprovider.utils;
 
 import me.devtec.theapi.bukkit.game.ItemMaker;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.SpecializedDrops;
 import pluginprovider.enums.updater.UpdateStatus;
@@ -33,6 +34,19 @@ public class SpecialItems {
                 .displayName("&cClose").lore(
                         "",
                         " &7➥ Click to &cClose&7!",
+                        ""
+                );
+        return maker.build();
+    }
+    public static ItemStack getRequester(Player p) {
+        ItemMaker maker = ItemMaker.ofHead().skinName(p.getName())
+                .displayName("&7➥ Requester: &c" + p.getName())
+                .lore(
+                        "",
+                        " &7➥ Name: &c" + p.getName(),
+                        " &7➥ UUID: &c" + p.getUniqueId(),
+                        " &7➥ SD-Admin: &c" + Processor.translateBoolean(p.hasPermission("sd.admin"), "&c", "&c"),
+                        " &7➥ Ping: &c" + p.getPing(),
                         ""
                 );
         return maker.build();
