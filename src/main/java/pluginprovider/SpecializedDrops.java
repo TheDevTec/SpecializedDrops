@@ -2,9 +2,11 @@ package pluginprovider;
 
 import me.devtec.shared.dataholder.Config;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.EntityType;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import pluginprovider.commands.SpecializedCommand;
 import pluginprovider.listeners.BlockBreakEvent;
 import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.CollectionsSystem;
@@ -35,6 +37,8 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(new BlockBreakEvent(), this);
         Bukkit.getPluginManager().registerEvents(new EntityDeathEvent(), this);
+        // Register
+        new SpecializedCommand();
     }
 
     @Override

@@ -79,6 +79,10 @@ public class MainSystem {
             @Override
             public void run() {
                 ProvidedEntityDropType entity = (ProvidedEntityDropType) info.getCorrect();
+                if (entity == ProvidedEntityDropType.CANCELED) {
+                    dropItems(info.getWorld(), info.getLocation(), info.getDefaultDrop());
+                    return;
+                }
                 if (OverrideSystem.override(info).size() > 0) {
                     return;
                 }

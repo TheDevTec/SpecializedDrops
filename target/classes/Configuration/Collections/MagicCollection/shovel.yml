@@ -46,6 +46,7 @@ IsAdditional: false
 #               {DropLegacyName} -> Name of drop (Legacy)
 #               {DropColorizedName} -> Name of drop (Colorized)
 DropEvents:
+  ActionBar: "&cCongratulations!"
   Title:
     Line1: "Congratulations!"
     Line2: "You've received special drop..."

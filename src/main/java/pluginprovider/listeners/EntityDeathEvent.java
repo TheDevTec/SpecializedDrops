@@ -16,7 +16,13 @@ public class EntityDeathEvent implements Listener {
 
     @EventHandler (priority = EventPriority.LOW)
     public void onEntityDie(org.bukkit.event.entity.EntityDeathEvent e) {
-        EntityDamageByEntityEvent damage =  (EntityDamageByEntityEvent) e.getEntity().getLastDamageCause(); if (damage == null) return;
+        EntityDamageByEntityEvent damage;
+        try {
+            damage = (EntityDamageByEntityEvent) e.getEntity().getLastDamageCause();
+        } catch (ClassCastException r) {
+            return;
+        }
+        if (damage == null) return;
         Player player = (Player) damage.getDamager();
         List<ItemStack> drops = new ArrayList<>(e.getDrops());
         e.getDrops().clear();

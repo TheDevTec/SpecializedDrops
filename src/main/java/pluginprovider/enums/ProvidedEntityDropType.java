@@ -2,6 +2,7 @@ package pluginprovider.enums;
 
 public enum ProvidedEntityDropType {
 
+    CANCELED(""),
     MOB_TYPE("Mob_Types"),
     FRIENDLY_TYPE("Friendly_Types");
 

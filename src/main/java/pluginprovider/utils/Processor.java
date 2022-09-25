@@ -4,6 +4,8 @@ import me.devtec.shared.dataholder.Config;
 import me.devtec.shared.dataholder.DataType;
 import me.devtec.shared.utility.StringUtils;
 import me.devtec.theapi.bukkit.game.ItemMaker;
+import me.devtec.theapi.bukkit.gui.GUI;
+import me.devtec.theapi.bukkit.gui.ItemGUI;
 import me.devtec.theapi.bukkit.xseries.XMaterial;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -16,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Map;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -97,6 +100,21 @@ public class Processor {
     // DropEvents executor
     public static void asyncDropEvents(String path, Factors factors) {
         new DropExecutor(Config.loadFromFile(path), factors, new CachedAttributes(path)).execute();
+    }
+
+    // Import to menu
+    public static void importToMenu(Map<Character, ItemGUI> items, List<String> layout, GUI menu) {
+        int counter = 0;
+        for (String var : layout) {
+            for (char var1 : var.toCharArray()) {
+                if (items.containsKey(var1)) menu.addItem(items.get(var1));
+            }
+        }
+    }
+
+    // Get latest version from Spigot.org
+    public static String getLatestVersion() {
+        return "Not developed yet";
     }
 
 }
