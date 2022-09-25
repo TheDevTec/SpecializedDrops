@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://paste.sk/images/vCoozf.png" />
+  <img src="https://github.com/TheDevTec/SpecializedDrops/blob/main/images/Logo/512x499.png?raw=true" />
 </p>
 
 ## Quick description
