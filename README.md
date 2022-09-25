@@ -21,7 +21,7 @@ No, but if You want to use it correctly, make sure about
 - TheAPI in /plugins folder (TheAPI is depend for this source)
 
 <p align="center">
-  <img src="https://paste.sk/images/fRRQUY.png"/>
+  <img src="https://github.com/TheDevTec/SpecializedDrops/blob/main/images/Logo/Setup.png?raw=true"/>
 </p>
 
 ## Read this!
