@@ -1,0 +1,32 @@
+# Write here a Legacy Name of a Profile
+Legacy_Name: "Example Name"
+# Condition settings
+Conditions:
+  # You can override Block or Entity
+  Override: Block
+  # Put name of Material, if you selected Override: Entity, then put here EntityType name
+  Types:
+    - STONE
+  # Select factor for destroy time
+  # Options: DAY, NIGHT
+  Time: DAY
+  # Do you want to set drop to one selected group?
+  # Add permissions to profile...
+  Permissions:
+    - "special.destroy"
+  # Select world where item can be dropped
+  World: "default"
+  # Value if player have to sneak to drop item
+  Sneaking: false
+  # Select Biome where you want to drop item...
+  Biome: "Plants"
+  # Select if item can be dropped only if is raining in a world...
+  Raining: true
+  # You can define special players with Destroyed value
+  Destroyer:
+    - "M3II0"
+    - "StraikerinaCZ"
+  # Looking types: DOWN, STRAIGHT, UP
+  Looking: UP
+  # Set value, if profile can use Fortune or Looting value
+  Luck: false

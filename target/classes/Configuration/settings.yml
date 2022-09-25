@@ -1,0 +1,151 @@
+# Simple Override is simple alternative of advanced Override system...
+# (Advanced Override system You can configure in /Overrides folder)
+Simple_Override:
+  '0':
+    # Switch (true/false)
+    Enabled: false
+    # Put here Entity/Block names
+    Editing:
+      - "STONE"
+    # Put here drop from /Items/...
+    # If you want use custom Item... Use: ~{Item:<fileName>}
+    # Put FileName with .yml!
+    Drop: STONE
+    # You can edit chance here
+    Chance: 50.0
+  '1':
+    # Switch (true/false)
+    Enabled: false
+    # Put here Entity/Block names
+    Editing:
+      - "SAND"
+    # Put here drop from /Items/...
+    # If you want use custom Item... Use: ~{Item:<FolderName>/<FileName>}
+    # Put FileName with .yml!
+    Drop: RED_SAND
+    # You can edit chance here
+    Chance: 50.0
+# Here you can prepare the Selection System
+System:
+  # If You don't have to, don't edit this option...
+  # Here You can edit selection priority
+  # Types: | Override: Override system... If is disabled this part will be skipped
+  #        | MainSystem: Main selection system... If is disabled part will be skipped tho
+  #        | DefaultDrop: Default drop from Block/Entity
+  # If Block destroy or Entity kill don't contain conditions in any profile, Overrides part will be skipped
+  # and the selection is on MainSystem
+  Priorities:
+    - Override
+    - MainSystem
+    - DefaultDrop
+  # Here you can configure the Main Selection System
+  MainSystem:
+    # Setup drops for blocks
+    Blocks:
+      # Do you want see what Type contains?
+      # Check out our Sites for more details...
+      # Do not edit type names! Just values...
+      # Put directories names from /Items folder!
+      # You can also include any other folder...
+      # DefaultChance is chance for default drop (non edit)
+      # Example:
+      #
+      # Includes:
+      #   - Glasses
+      #   - BasedBlocks
+      #
+      # If You don't want to include anything -> Includes: []
+      Undefined_Types:
+        Enabled: true
+        Folder: "Undefineds"
+        DefaultChance: 95.0
+        Includes: []
+      Glass_Types:
+        Enabled: true
+        Folder: "Glasses"
+        DefaultChance: 95.0
+        Includes: []
+      Advantage_Types:
+        Enabled: true
+        Folder: "Advantages"
+        DefaultChance: 95.0
+        Includes: []
+      Based_Block_Types:
+        Enabled: true
+        Folder: "BasedBlocks"
+        DefaultChance: 95.0
+        Includes: []
+      Design_Types:
+        Enabled: true
+        Folder: "Designs"
+        DefaultChance: 95.0
+        Includes: []
+      Using_Types:
+        Enabled: true
+        Folder: "Usings"
+        DefaultChance: 95.0
+        Includes: []
+      Electricity_Types:
+        Enabled: true
+        Folder: "Electricities"
+        DefaultChance: 95.0
+        Includes: []
+      Plants_Types:
+        Enabled: true
+        Folder: "Plants"
+        DefaultChance: 95.0
+        Includes: []
+      Snow_Types:
+        Enabled: true
+        Folder: "Snows"
+        DefaultChance: 95.0
+        Includes: []
+      Dirt_Types:
+        Enabled: true
+        Folder: "Dirts"
+        DefaultChance: 95.0
+        Includes: []
+      Sand_Types:
+        Enabled: true
+        Folder: "Sands"
+        DefaultChance: 95.0
+        Includes: []
+      Stone_Types:
+        Enabled: true
+        Folder: "Stones"
+        DefaultChance: 95.0
+        Includes: []
+      Deep_Stone_Types:
+        Enabled: true
+        Folder: "DeepStones"
+        DefaultChance: 95.0
+        Includes: []
+      Ore_Types:
+        Enabled: true
+        Folder: "Ores"
+        DefaultChance: 95.0
+        Includes: []
+      Wood_Types:
+        Enabled: true
+        Folder: "Woods"
+        DefaultChance: 95.0
+        Includes: []
+      Food_Types:
+        Enabled: true
+        Folder: "Foods"
+        DefaultChance: 95.0
+        Includes: []
+    # Setup drops for entities
+    Entities:
+      # Mob types contains every enemy entity
+      Mob_Types:
+        Enabled: true
+        Folder: "Mobs"
+        DefaultChance: 95.0
+        Includes: []
+      # Friendly types contains every friendly entity
+      Friendly_Types:
+        Enabled: true
+        Folder: "Friends"
+        DefaultChance: 95.0
+        Includes: []

@@ -1,0 +1,44 @@
+### | This is an example configuration file
+### | This file isn't works in enabled plugin...
+### | Do not remove this file to know what all you can create
+# You can use 1.13+ ID's or if you want you can also you 1.13- ID's
+# 1.13+ -> Like BLACK_WOOL
+# 1.13- -> Like 2:2
+Material: SNOW_BALL
+# You can use classic colors...
+# With 1.16 or higher you can use gradient & rgb
+# Gradient example: !{hex-color}Your text!{hex-color}
+# Rgb example: #{hex-color}Your text!
+Name: ""
+# Don't use colors in legacy text!
+LegacyName: ""
+# Use '1' in non-stackable items like Sword or Bucket
+# If you want use Random... -> Example:
+# Amount: ~Random(min, max)
+# So -> Amount: ~Random(1,5)
+Amount: "~Random(1,3)"
+# CustomModelData alue is for custom texture-pack usage...
+# You're not using texture pack? Throw here 0
+CustomModelData: 0
+# Put texts that you want to have in lore...
+# You can use Colors... With 1.16 or higher Gradient & Rgb
+Lore: []
+# List of enchantments you can find on plugin pages
+# Example: "{enchantment}:{intensity}"
+Enchantments: []
+# Write DropPercentage like: 1/100 which means 1%
+# Map: | 1/1000 - 0.1%
+#      | 1/10000 - 0.01%
+#      | 1/100000 - 0.001%
+#      | 1/1000000 - 0.0001%
+DropPercentage: "1/20"
+# If you enable this option... This item will drop with default drop...
+IsAdditional: true
+# In every line, message you can use Colors... With 1.16 or higher Gradient & Rgb
+# In custom commands you can't use our API, search information about plugin command
+# Placeholders: {x} {y} {z} -> Location of drop
+#               {Player} -> Player's name
+#               {MinedBlock} -> Name of MinedBlock
+#               {DropLegacyName} -> Name of drop (Legacy)
+#               {DropColorizedName} -> Name of drop (Colorized)
+DropEvents: []

@@ -1,0 +1,7 @@
+name: SpecializedDrops
+author: TheDevTec
+main: pluginprovider.SpecializedDrops
+version: 1.0
+api-version: 1.13
+depend:
+  - TheAPI
