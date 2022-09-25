@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://paste.sk/images/PzQu6l.png" />
+  <img src="[https://paste.sk/images/PzQu6l.png](https://github.com/TheDevTec/SpecializedDrops/blob/main/images/Logo/1200x411.png?raw=true)" />
 </p>
 
 # Enchants:
