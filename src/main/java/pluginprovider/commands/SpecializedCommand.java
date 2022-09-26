@@ -9,9 +9,11 @@ import me.devtec.theapi.bukkit.gui.GUI;
 import me.devtec.theapi.bukkit.gui.HolderGUI;
 import me.devtec.theapi.bukkit.gui.ItemGUI;
 import me.devtec.theapi.bukkit.xseries.XMaterial;
+import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import pluginprovider.coreapi.CoreMessage;
 import pluginprovider.utils.Processor;
 import pluginprovider.utils.SpecialItems;
 
@@ -58,8 +60,8 @@ public class SpecializedCommand {
         GUI menu = new GUI("§8➥ SpecializedDrops", 54);
         Map<Character, ItemGUI> items = new HashMap<>();
         List<String> layout = Arrays.asList(
-                "----h----",
-                "-r-------",
+                "--r-h-c--",
+                "---------",
                 "---------",
                 "---------",
                 "---------",
@@ -83,9 +85,25 @@ public class SpecializedCommand {
             }
         });
 
-        // p
+        // r
         ItemStack r = SpecialItems.getRequester(p);
         items.put('r', new EmptyItemGUI(r));
+
+        // c
+        ItemStack c = SpecialItems.getCreators();
+        items.put('c', new ItemGUI(c) {
+            @Override
+            public void onClick(Player player, HolderGUI holderGUI, GUI.ClickType clickType) {
+                CoreMessage message = new CoreMessage();
+                message.addText("\n");
+                message.addText("&7| &3The DevTec\n");
+                message.addText("  &7| &fhttps://github.com/TheDevTec\n", "&bClick to open!", ClickEvent.Action.OPEN_URL, "https://github.com/TheDevTec");
+                message.addText("\n");
+                message.addText(" &8| &7If You want to support us, follow us or donate!\n");
+                message.sendTo(player);
+                holderGUI.close(player);
+            }
+        });
 
         Processor.importToMenu(items, layout, menu);
         return menu;
