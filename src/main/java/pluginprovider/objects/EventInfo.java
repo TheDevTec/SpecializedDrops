@@ -5,6 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.enums.ProvidedBlockDropType;
 import pluginprovider.enums.ProvidedEntityDropType;
@@ -15,11 +16,11 @@ import java.util.List;
 public class EventInfo {
 
     // Builder
-    public static EventInfo parseEventInfo(Block block, Factors factors, List<ItemStack> defaultDrops) {
-        return new EventInfo(AdvancedTypes.getByMaterial(block.getType()), factors, block.getLocation(), block.getWorld(), defaultDrops);
+    public static EventInfo parseEventInfo(Player destroyer, Block block, Factors factors, List<ItemStack> defaultDrops) {
+        return new EventInfo(destroyer, AdvancedTypes.getByMaterial(block.getType()), factors, block.getLocation(), block.getWorld(), defaultDrops);
     }
-    public static EventInfo parseEventInfo(Entity killed, Factors factors, List<ItemStack> defaultDrops) {
-        return new EventInfo(AdvancedTypes.getByEntityType(killed.getType()), factors, killed.getLocation(), killed.getWorld(), defaultDrops);
+    public static EventInfo parseEventInfo(Player destroyer, Entity killed, Factors factors, List<ItemStack> defaultDrops) {
+        return new EventInfo(destroyer, AdvancedTypes.getByEntityType(killed.getType()), factors, killed.getLocation(), killed.getWorld(), defaultDrops);
     }
 
     // Values
@@ -29,23 +30,26 @@ public class EventInfo {
     private final Factors factors;
     private final Location location;
     private final World world;
+    private final Player destroyer;
 
     // Private constructor
-    private EventInfo(ProvidedBlockDropType providedBlockDropType, Factors factors, Location loc, World world, List<ItemStack> defaultDrop) {
+    private EventInfo(Player destroyer, ProvidedBlockDropType providedBlockDropType, Factors factors, Location loc, World world, List<ItemStack> defaultDrop) {
         this.factors = factors;
         this.providedBlockDropType = providedBlockDropType;
         this.providedEntityDropType = null;
         this.location = loc;
         this.world = world;
         this.defaultDrop = defaultDrop;
+        this.destroyer = destroyer;
     }
-    private EventInfo(ProvidedEntityDropType providedBlockDropType, Factors factors, Location loc, World world, List<ItemStack> defaultDrop) {
+    private EventInfo(Player destroyer, ProvidedEntityDropType providedBlockDropType, Factors factors, Location loc, World world, List<ItemStack> defaultDrop) {
         this.factors = factors;
         this.providedBlockDropType = null;
         this.providedEntityDropType = providedBlockDropType;
         this.location = loc;
         this.world = world;
         this.defaultDrop = defaultDrop;
+        this.destroyer = destroyer;
     }
 
     // Getter
@@ -64,6 +68,9 @@ public class EventInfo {
     }
     public List<ItemStack> getDefaultDrop() {
         return defaultDrop;
+    }
+    public Player getDestroyer() {
+        return destroyer;
     }
 
 }

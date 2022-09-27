@@ -5,12 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Quick clean-up&#10;- GUI method in command class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/coreapi/CoreMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/SpecializedModuleManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/CreatorsGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/QuickItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/SpecializedItemMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/WriterResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/EventInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/EventInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Configuration/Items/example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/example.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -40,11 +52,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CrazyThings" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.53965783" />
-    <property name="settings.editor.selected.configurable" value="discord-application" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -309,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664144245869</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="- Quick clean-up&#10;- GUI method in command class">
+      <created>1664230901022</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1664230901022</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

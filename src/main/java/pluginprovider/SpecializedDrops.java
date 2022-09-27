@@ -9,6 +9,7 @@ import pluginprovider.commands.SpecializedCommand;
 import pluginprovider.listeners.BlockBreakEvent;
 import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.CollectionsSystem;
+import pluginprovider.modules.SpecializedModuleManager;
 import pluginprovider.selectionsystems.OverrideSystem;
 import pluginprovider.utils.AdvancedTypes;
 import pluginprovider.utils.Processor;
@@ -32,6 +33,7 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         CollectionsSystem.reloadCollections();
         OverrideSystem.reloadOverrides();
         AdvancedTypes.loadTypes();
+        moduleManager = new SpecializedModuleManager();
         // Register utilities
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(new BlockBreakEvent(), this);
@@ -66,6 +68,9 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     private static Config collections;
     private static Config overrides;
 
+    // Module manager
+    private static SpecializedModuleManager moduleManager;
+
     // Getters plugin values
     public static Plugin getInstance() {
         return instance;
@@ -81,6 +86,12 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     public static Config getSettings() {
         return settings;
     }
+
+    // Getters manager
+    public static SpecializedModuleManager getModuleManager() {
+        return moduleManager;
+    }
+
 
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////

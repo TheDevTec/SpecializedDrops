@@ -27,7 +27,7 @@ public class EntityDeathEvent implements Listener {
         Player player = (Player) damage.getDamager();
         List<ItemStack> drops = new ArrayList<>(e.getDrops());
         e.getDrops().clear();
-        EventInfo info = EventInfo.parseEventInfo(e.getEntity(), new Factors(e.getEntity(), player), drops);
+        EventInfo info = EventInfo.parseEventInfo(player, e.getEntity(), new Factors(e.getEntity(), player), drops);
         MainSystem.entityDropRequest(info);
     }
 

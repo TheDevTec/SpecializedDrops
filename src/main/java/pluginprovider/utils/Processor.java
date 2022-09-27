@@ -8,6 +8,7 @@ import me.devtec.theapi.bukkit.gui.GUI;
 import me.devtec.theapi.bukkit.gui.ItemGUI;
 import me.devtec.theapi.bukkit.xseries.XMaterial;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import pluginprovider.objects.CachedAttributes;
@@ -65,9 +66,19 @@ public class Processor {
         } else return Integer.parseInt(text);
     }
 
+    // Reader
+    public static ItemMaker prepareMaker(String value, Player opener) {
+        if (Pattern.compile("~Player").matcher(value).find()) {
+            return ItemMaker.ofHead().skinName(opener.getName());
+        } else if (Pattern.compile("~Head:").matcher(value).find()) {
+            value = value.replace("~Head:", "");
+            return ItemMaker.ofHead().skinValues(value);
+        } else return ItemMaker.of(XMaterial.matchXMaterial(value).get().parseMaterial());
+    }
+
     // Item reader
-    public static ItemStack readItem(CachedAttributes rawItem) {
-        ItemStack value = ItemMaker.of(parseMaterial(rawItem.getMaterial()).parseMaterial())
+    public static ItemStack readItem(CachedAttributes rawItem, Player opener) {
+        ItemStack value = prepareMaker(rawItem.getMaterial(), opener)
                 .displayName(rawItem.getName())
                 .amount(parseItemAmount(rawItem.getAmount()))
                 .customModel(rawItem.getCustomModelData())
@@ -78,8 +89,8 @@ public class Processor {
         }
         return value;
     }
-    public static ItemStack readAndExecute(CachedAttributes rawItem, Factors factors) {
-        ItemStack value = ItemMaker.of(parseMaterial(rawItem.getMaterial()).parseMaterial())
+    public static ItemStack readAndExecute(CachedAttributes rawItem, Factors factors, Player opener) {
+        ItemStack value = prepareMaker(rawItem.getMaterial(), opener)
                 .displayName(rawItem.getName())
                 .amount(parseItemAmount(rawItem.getAmount()))
                 .customModel(rawItem.getCustomModelData())
@@ -92,11 +103,6 @@ public class Processor {
         return value;
     }
 
-    // Material
-    public static XMaterial parseMaterial(String material) {
-        return XMaterial.matchXMaterial(material).orElse(null);
-    }
-
     // DropEvents executor
     public static void asyncDropEvents(String path, Factors factors) {
         new DropExecutor(Config.loadFromFile(path), factors, new CachedAttributes(path)).execute();
@@ -107,7 +113,9 @@ public class Processor {
         int counter = 0;
         for (String var : layout) {
             for (char var1 : var.toCharArray()) {
-                if (items.containsKey(var1)) menu.addItem(items.get(var1));
+                if (var1 == ' ') { ++counter; continue; }
+                if (items.containsKey(var1)) menu.setItem(counter, items.get(var1));
+                ++counter;
             }
         }
     }

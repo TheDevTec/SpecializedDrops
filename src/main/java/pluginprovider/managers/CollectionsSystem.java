@@ -90,7 +90,7 @@ public class CollectionsSystem {
         for (int c = 0; c <= maxDrops; ++c) {
             CachedItem selected = randomize.getRandom();
             runAsyncDropEvents(selected.quickAttributes(), info.getFactors());
-            drops.add(selected.asyncBuildStack());
+            drops.add(selected.asyncBuildStack(info.getDestroyer()));
         }
         if (withDefaults) drops.addAll(info.getDefaultDrop());
         return drops;

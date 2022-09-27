@@ -67,7 +67,7 @@ public class MainSystem {
                     double one = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[0]);
                     double two = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[1]);
                     double ce = one/two;
-                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(info.getFactors()));
+                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(info.getFactors(), info.getDestroyer()));
                     if (var.isAdditional()) selectedDrops.addAll(info.getDefaultDrop());
                     dropItems(info.getWorld(), info.getLocation(), selectedDrops);
                 } catch (Exception e) {e.printStackTrace();}
@@ -124,7 +124,7 @@ public class MainSystem {
                     double one = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[0]);
                     double two = Double.parseDouble(var.getConfig().getString("DropPercentage").split("/")[1]);
                     double ce = one/two;
-                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(info.getFactors()));
+                    selectedDrops.add(new CachedItem(var.getPath(), ce).asyncBuildAndExecute(info.getFactors(), info.getDestroyer()));
                     if (var.isAdditional()) selectedDrops.addAll(info.getDefaultDrop());
                     dropItems(info.getWorld(), info.getLocation(), selectedDrops);
                 } catch (Exception e) {e.printStackTrace();}

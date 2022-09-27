@@ -58,9 +58,9 @@ public class SpecialItems {
                 .lore(
                         "",
                         " &7➥ Hello, We're DevTec!",
-                        "   &7We're creating free plugins",
-                        "   &7for Spigot with our powerful",
-                        "   &7API called 'TheAPI'!",
+                        "    &7We're creating free plugins",
+                        "    &7for Spigot with our powerful",
+                        "    &7API called 'TheAPI'!",
                         "",
                         " &7➥ Members:",
                         "  &3➥ &3StraikerinaCZ",

@@ -4,6 +4,8 @@
 # You can use 1.13+ ID's or if you want you can also you 1.13- ID's
 # 1.13+ -> Like BLACK_WOOL
 # 1.13- -> Like 2:2
+# ~Player -> Replace head with player's head
+# ~Head:<value> -> Replace head with head value from MinecraftHeads
 Material: STONE
 # You can use classic colors...
 # With 1.16 or higher you can use gradient & rgb

@@ -13,6 +13,7 @@ import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import pluginprovider.SpecializedDrops;
 import pluginprovider.coreapi.CoreMessage;
 import pluginprovider.utils.Processor;
 import pluginprovider.utils.SpecialItems;
@@ -62,7 +63,7 @@ public class SpecializedCommand {
         List<String> layout = Arrays.asList(
                 "--r-h-c--",
                 "---------",
-                "---------",
+                "-i-------",
                 "---------",
                 "---------",
                 "----x----"
@@ -102,6 +103,21 @@ public class SpecializedCommand {
                 message.addText(" &8| &7If You want to support us, follow us or donate!\n");
                 message.sendTo(player);
                 holderGUI.close(player);
+            }
+        });
+
+        // i
+        ItemStack i = ItemMaker.ofHead().skinValues("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZmMzE0MzFkNjQ1ODdmZjZlZjk4YzA2NzU4MTA2ODFmOGMxM2JmOTZmNTFkOWNiMDdlZDc4NTJiMmZmZDEifX19")
+                .displayName("&a➥ ItemMaker")
+                .lore(
+                        "",
+                        " &7| Click to &acreate &7your custom item!",
+                        ""
+                ).build();
+        items.put('i', new ItemGUI(i) {
+            @Override
+            public void onClick(Player player, HolderGUI holderGUI, GUI.ClickType clickType) {
+                SpecializedDrops.getModuleManager().getItemMaker().runFor(player);
             }
         });
 
