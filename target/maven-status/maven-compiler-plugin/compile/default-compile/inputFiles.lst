@@ -1,4 +1,5 @@
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\objects\CachedItem.java
+D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\modules\itemmaker\materials\Pagination.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\enums\updater\UpdateStatus.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\enums\factors\FactorsDataType.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\modules\itemmaker\SpecializedItemMaker.java
@@ -16,6 +17,7 @@ D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\enums\Pro
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\selectionsystems\OverrideSystem.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\enums\ProvidedEntityDropType.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\utils\WriterResult.java
+D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\modules\itemmaker\materials\MaterialPicker.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\SpecializedDrops.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\enums\factors\valuetypes\FactorsTimeValueType.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\coreapi\CoreMessage.java
@@ -23,6 +25,7 @@ D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\modules\i
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\modules\itemmaker\CreatorsGUI.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\modules\SpecializedModuleManager.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\selectionsystems\MainSystem.java
+D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\utils\ArrowType.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\listeners\EntityDeathEvent.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\utils\AdvancedTypes.java
 D:\€-Java\.SourceCodes\SpecializedDrops\src\main\java\pluginprovider\objects\DropExecutor.java

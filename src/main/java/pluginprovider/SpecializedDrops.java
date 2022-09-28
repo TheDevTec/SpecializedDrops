@@ -11,7 +11,6 @@ import pluginprovider.listeners.EntityDeathEvent;
 import pluginprovider.managers.CollectionsSystem;
 import pluginprovider.modules.SpecializedModuleManager;
 import pluginprovider.selectionsystems.OverrideSystem;
-import pluginprovider.utils.AdvancedTypes;
 import pluginprovider.utils.Processor;
 
 public class SpecializedDrops extends JavaPlugin implements Listener {
@@ -32,7 +31,6 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         // Load all modules
         CollectionsSystem.reloadCollections();
         OverrideSystem.reloadOverrides();
-        AdvancedTypes.loadTypes();
         moduleManager = new SpecializedModuleManager();
         // Register utilities
         Bukkit.getPluginManager().registerEvents(this, this);

@@ -2,6 +2,7 @@ package pluginprovider.modules.itemmaker;
 
 import me.devtec.shared.dataholder.Config;
 import me.devtec.theapi.bukkit.game.ItemMaker;
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -16,7 +17,8 @@ import java.util.Map;
 public class QuickItem {
 
     // Values
-    private String material, name, legacy_name, amount;
+    private Material material;
+    private String name, legacy_name, amount;
     private int custom_model_data;
     private List<String> lore;
     private Map<String, Integer> enchantments;
@@ -24,11 +26,27 @@ public class QuickItem {
     private boolean is_additional;
 
     // Constructor
-    private QuickItem() {}
+    private QuickItem(QuickItem... item) {
+        if (item.length > 0) {
+            QuickItem rewrite = item[0];
+            material = rewrite.getMaterial();
+            name = rewrite.getName();
+            legacy_name = rewrite.getLegacyName();
+            amount = rewrite.getAmount();
+            custom_model_data = rewrite.getCustomModelData();
+            lore = rewrite.getLore();
+            enchantments = rewrite.getEnchantments();
+            drop_percentage = rewrite.getDropPercentage();
+            is_additional = rewrite.IsAdditional();
+        }
+    }
 
     // Builder
     public static QuickItem generate() {
         return new QuickItem();
+    }
+    public static QuickItem generate(QuickItem item) {
+        return new QuickItem(item);
     }
 
     // Optionals
@@ -57,27 +75,32 @@ public class QuickItem {
     public void setLore(List<String> lore) {
         this.lore = lore;
     }
-    public void setMaterial(String material) {
+    public void setMaterial(Material material) {
         this.material = material;
     }
 
     // Getter
     public String getName() {
+        if (name == null) return "";
         return name;
     }
     public String getAmount() {
+        if (amount == null) return "1";
         return amount;
     }
     public Map<String, Integer> getEnchantments() {
+        if (enchantments == null) return new HashMap<>();
         return enchantments;
     }
     public List<String> getLore() {
+        if (lore == null) return new ArrayList<>();
         return lore;
     }
     public String getLegacyName() {
+        if (legacy_name == null) return "";
         return legacy_name;
     }
-    public String getMaterial() {
+    public Material getMaterial() {
         return material;
     }
     public double getDropPercentage() {
@@ -92,15 +115,15 @@ public class QuickItem {
 
     // Build item
     public ItemStack getFormatted(Player opener) {
-        ItemMaker prepare = Processor.prepareMaker(material, opener)
+        ItemMaker prepare = Processor.prepareMaker(material.name().toUpperCase(), opener)
                 .displayName(getName())
                 .customModel(getCustomModelData())
                 .amount(Processor.parseItemAmount(getAmount()))
                 .lore(getLore());
-        for (String var : enchantments.keySet()) {
+        for (String var : getEnchantments().keySet()) {
             Enchantment enchantment = Enchantment.getByName(var);
             if (enchantment == null) continue;
-            prepare.enchant(enchantment, enchantments.get(var));
+            prepare.enchant(enchantment, getEnchantments().get(var));
         }
         return prepare.build();
     }
@@ -133,7 +156,7 @@ public class QuickItem {
     private List<String> processEnchantments() {
         List<String> value = new ArrayList<>();
         for (String var : getEnchantments().keySet()) {
-            value.add(var + ":" + enchantments.get(var));
+            value.add(var + ":" + getEnchantments().get(var));
         }
         return value;
     }

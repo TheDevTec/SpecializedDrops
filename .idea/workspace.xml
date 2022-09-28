@@ -4,25 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Quick clean-up&#10;- GUI method in command class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/SpecializedModuleManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/CreatorsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/QuickItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/SpecializedItemMaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/WriterResult.java" afterDir="false" />
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Client side creation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/materials/MaterialPicker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/materials/Pagination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/ArrowType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/TheAPI.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libs/TheAPI.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/commands/SpecializedCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/managers/CollectionsSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/CachedItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/EventInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/EventInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/CreatorsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/CreatorsGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/QuickItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/QuickItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/SpecializedItemMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/SpecializedItemMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/AdvancedTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/SpecialItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Configuration/Items/example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/Items/example.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CrazyThings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.53965783" />
@@ -60,11 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\libs" />
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Advantages" />
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\BasedBlocks" />
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\DeepStones" />
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Designs" />
-      <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Electricities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\src\main\resources\Configuration\Items\Foods" />
@@ -328,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664230901022</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="- Client side creation">
+      <created>1664312257372</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664312257372</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -343,7 +345,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Fixed-up code (Works in game)&#10;- asyncPickRandomItem in ItemGroup.java has to be recalculated..." />
     <MESSAGE value="- Fixed-up code&#10;- Added Profile.java (Override.java has to be coded)&#10;- Fixed asyncRandomItemStack();&#10;- Added Overrides folder" />
     <MESSAGE value="- Updated Code's folder" />
     <MESSAGE value="- Added /Items&#10;- Pre-created settings.yml&#10;- Edited workspace.xml&#10;- Added Factors.java entity constructor" />
@@ -368,6 +369,7 @@
     <MESSAGE value="- Updated Plugin's folder" />
     <MESSAGE value="- Started menu creation...&#10;- Updated mob types into code&#10;- Created UpdateStatus.java" />
     <MESSAGE value="- Quick clean-up&#10;- GUI method in command class" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Quick clean-up&#10;- GUI method in command class" />
+    <MESSAGE value="- Client side creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Client side creation" />
   </component>
 </project>
