@@ -1,9 +1,11 @@
 package pluginprovider.modules.itemmaker.materials;
 
 import me.devtec.shared.scheduler.Tasker;
+import me.devtec.shared.utility.StringUtils;
 import me.devtec.theapi.bukkit.game.ItemMaker;
 import me.devtec.theapi.bukkit.gui.*;
 import me.devtec.theapi.bukkit.xseries.XMaterial;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import pluginprovider.modules.itemmaker.CreatorsGUI;
@@ -153,7 +155,7 @@ public class MaterialPicker {
                             gui.setItem(counter, new EmptyItemGUI(builtMaterial));
                         } else if (material.isSupported() && material.parseMaterial().isItem() && material != XMaterial.AIR) {
                             ItemStack builtMaterial = ItemMaker.of(material.parseMaterial())
-                                    .displayName("&b" + material.name())
+                                    .displayName(formatMaterial(material.parseMaterial()))
                                     .lore("&7➥ Click to select this material!").build();
                             gui.setItem(counter, new ItemGUI(builtMaterial) {
                                 @Override
@@ -188,6 +190,30 @@ public class MaterialPicker {
             }
         }
         return returner;
+    }
+    private static String formatMaterial(Material material) {
+        StringBuilder value = new StringBuilder("&b");
+        String[] words = material.name().split("_");
+        int looped = 0;
+        for (String toFormat : words) {
+            if (toFormat.equals("TO")) value.append("to ");
+            else if (toFormat.equals("OF")) value.append("of ");
+            else {
+                char[] chars = toFormat.toCharArray();
+                value.append(String.valueOf(chars[0]).toUpperCase());
+                boolean skip = true;
+                for (Character character : chars) {
+                    if (skip) {
+                        skip = false;
+                        continue;
+                    }
+                    value.append(String.valueOf(character).toLowerCase());
+                }
+                if (words.length > looped) value.append(" ");
+            }
+            ++looped;
+        }
+        return value.toString();
     }
 
 }
