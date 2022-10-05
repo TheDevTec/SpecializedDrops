@@ -1,7 +1,6 @@
 package pluginprovider.modules.itemmaker.materials;
 
 import me.devtec.shared.scheduler.Tasker;
-import me.devtec.shared.utility.StringUtils;
 import me.devtec.theapi.bukkit.game.ItemMaker;
 import me.devtec.theapi.bukkit.gui.*;
 import me.devtec.theapi.bukkit.xseries.XMaterial;

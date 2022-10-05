@@ -4,22 +4,26 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
+import pluginprovider.SpecializedDrops;
 import pluginprovider.objects.EventInfo;
 import pluginprovider.objects.Factors;
 import pluginprovider.selectionsystems.MainSystem;
+import pluginprovider.utils.AdvancedTypes;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 public class BlockBreakEvent implements Listener {
 
-    @EventHandler (priority = EventPriority.LOW)
+    @EventHandler (priority = EventPriority.MONITOR)
     public void breakBlock(org.bukkit.event.block.BlockBreakEvent e) {
-        if (e.isCancelled()) return;
+        if (e.isCancelled() || !e.isDropItems()) return;
+        if (!SpecializedDrops.supportedGameModes.contains(e.getPlayer().getGameMode().name())) {
+            return;
+        }
         e.setDropItems(false);
-        List<ItemStack> defaultDrops = new ArrayList<>(e.getBlock().getDrops(e.getPlayer().getItemInUse()));
-        EventInfo info = EventInfo.parseEventInfo(e.getPlayer(), e.getBlock(), new Factors(e.getBlock(), e.getPlayer()), defaultDrops);
-        MainSystem.blockDropRequest(info);
+        Collection<ItemStack> defaultDrops = e.getBlock().getDrops(e.getPlayer().getItemInUse());
+        EventInfo info = EventInfo.parseEventInfo(e.getPlayer(), e.getBlock().getLocation(), AdvancedTypes.getByMaterial(e.getBlock().getType()), new Factors(e.getBlock(), e.getPlayer()), defaultDrops);
+        MainSystem.dropRequest(info);
     }
 
 }

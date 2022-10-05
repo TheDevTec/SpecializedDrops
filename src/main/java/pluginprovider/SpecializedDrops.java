@@ -13,6 +13,8 @@ import pluginprovider.modules.SpecializedModuleManager;
 import pluginprovider.selectionsystems.OverrideSystem;
 import pluginprovider.utils.Processor;
 
+import java.util.List;
+
 public class SpecializedDrops extends JavaPlugin implements Listener {
 
     ////////////////////////////////////////////////////////////////
@@ -52,6 +54,8 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
         settings = Config.loadFromFile("./plugins/SpecializedDrops/settings.yml");
         collections = Config.loadFromFile("./plugins/SpecializedDrops/Collections/collections.yml");
         overrides = Config.loadFromFile("./plugins/SpecializedDrops/Overrides/overrides.yml");
+        // Load static using values
+        supportedGameModes = SpecializedDrops.getSettings().getStringList("System.SupportedGameModes");
     }
 
     ////////////////////////////////////////////////////////////////
@@ -65,6 +69,9 @@ public class SpecializedDrops extends JavaPlugin implements Listener {
     private static Config settings;
     private static Config collections;
     private static Config overrides;
+
+    // Static using values
+    public static List<String> supportedGameModes;
 
     // Module manager
     private static SpecializedModuleManager moduleManager;

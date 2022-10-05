@@ -1,6 +1,8 @@
 package pluginprovider.enums;
 
-public enum ProvidedBlockDropType {
+import pluginprovider.utils.ProvidedDataPath;
+
+public enum ProvidedBlockDropType implements ProvidedDataPath {
 
     UNDEFINED_TYPE("Undefined_Types"),
     GLASS_TYPE("Glass_Types"),

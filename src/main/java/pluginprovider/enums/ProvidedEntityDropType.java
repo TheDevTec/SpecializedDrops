@@ -1,6 +1,8 @@
 package pluginprovider.enums;
 
-public enum ProvidedEntityDropType {
+import pluginprovider.utils.ProvidedDataPath;
+
+public enum ProvidedEntityDropType implements ProvidedDataPath {
 
     CANCELED(""),
     MOB_TYPE("Mob_Types"),

@@ -27,6 +27,10 @@ Simple_Override:
     Chance: 50.0
 # Here you can prepare the Selection System
 System:
+  SupportedGameModes:
+    - SURVIVAL
+    - ADVENTURE
+    - CREATIVE
   # If You don't have to, don't edit this option...
   # Here You can edit selection priority
   # Types: | Override: Override system... If is disabled this part will be skipped

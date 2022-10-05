@@ -4,9 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Created MaterialPicker.java&#10;- Started of creation ItemMaker module">
+    <list default="true" id="15e45b9d-6653-4e69-80ca-dc39e55f52ad" name="Changes" comment="- Added material pa.er..">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/utils/ProvidedDataPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/SpecializedDrops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedBlockDropType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedEntityDropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/enums/ProvidedEntityDropType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/BlockBreakEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/listeners/EntityDeathEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/materials/MaterialPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/modules/itemmaker/materials/MaterialPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/EventInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/objects/EventInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pluginprovider/selectionsystems/MainSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Configuration/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Configuration/settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Collections/MagicCollection/axe.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Collections/MagicCollection/pickaxe.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Collections/MagicCollection/shovel.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Collections/MagicCollection/sword.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Collections/collections.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Configuration/settings.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Configuration/settings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Items/Dirts/dirtDust.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Items/example.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Overrides/Profiles/profile_example.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Overrides/overrides.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/settings.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +56,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.53965783" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;D:/€-Java/.SourceCodes/FadeProject&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\€-Java\.SourceCodes\SpecializedDrops\libs" />
@@ -326,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664401798363</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="- Added material paer..">
+      <created>1664446190207</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1664446190207</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,7 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Updated Code's folder" />
     <MESSAGE value="- Added /Items&#10;- Pre-created settings.yml&#10;- Edited workspace.xml&#10;- Added Factors.java entity constructor" />
     <MESSAGE value="- Some fixes" />
     <MESSAGE value="- Added supportive methods... (In Processor.java)&#10;- Advanced drop system (Counts with Additional &amp; List&lt;Drops&gt;)" />
@@ -366,6 +391,7 @@
     <MESSAGE value="- Quick clean-up&#10;- GUI method in command class" />
     <MESSAGE value="- Client side creation" />
     <MESSAGE value="- Created MaterialPicker.java&#10;- Started of creation ItemMaker module" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created MaterialPicker.java&#10;- Started of creation ItemMaker module" />
+    <MESSAGE value="- Added material pa.er.." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added material pa.er.." />
   </component>
 </project>
